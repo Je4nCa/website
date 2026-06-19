@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Montevo Studio — Strategy, Design, Systems & Growth</title>
+  <meta name="description" content="Montevo Studio es un estudio creativo-tecnológico que combina estrategia, diseño, sistemas y crecimiento para construir marcas que duran." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo">
+        <span class="nav__logo-name">Montevo Studio</span>
+        <span class="nav__logo-byline">creative &amp; tech</span>
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#services" class="nav__link">Servicios</a></li>
+        <li><a href="#work" class="nav__link">Trabajo</a></li>
+        <li><a href="#about" class="nav__link">Estudio</a></li>
+        <li><a href="#contact" class="nav__link nav__link--cta">Hablemos</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero-wrapper">
+  <section class="hero" id="hero">
+    <div class="hero__content">
+      <p class="hero__label">Estudio creativo &amp; tecnológico</p>
+      <h1 class="hero__headline">
+        Construimos marcas<br />
+        <em>que se quedan.</em>
+      </h1>
+      <p class="hero__sub">
+        Estrategia, diseño, sistemas y crecimiento — todo bajo un mismo techo,
+        enfocado en resultados que importan.
+      </p>
+      <div class="hero__actions">
+        <a href="#work" class="btn btn--primary">Ver trabajo</a>
+        <a href="#contact" class="btn btn--ghost">Iniciar proyecto</a>
+      </div>
+    </div>
+    <div class="hero__visual">
+      <div class="hero__mascot-wrap">
+        <img src="assets/images/mascot.png" alt="Mascota Montevo Studio" class="hero__mascot" />
+      </div>
+      <div class="hero__blob"></div>
+    </div>
+    <div class="hero__scroll-hint">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  </div><!-- /.hero-wrapper -->
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-label">Lo que hacemos</p>
+        <h2 class="section-title">Cuatro pilares,<br /><em>un propósito</em></h2>
+      </div>
+      <div class="services__grid">
+
+        <div class="service-card" data-index="01">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 40L24 8L40 40H8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M14 28H34" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Strategy</h3>
+          <p class="service-card__desc">
+            Definimos el rumbo: propuesta de valor, posicionamiento, arquitectura de marca y hoja de ruta para crecer con intención.
+          </p>
+          <ul class="service-card__list">
+            <li>Brand strategy</li>
+            <li>Posicionamiento</li>
+            <li>Roadmap de negocio</li>
+            <li>Investigación de mercado</li>
+          </ul>
+        </div>
+
+        <div class="service-card" data-index="02">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="8" width="32" height="32" rx="4" stroke="currentColor" stroke-width="2"/>
+              <circle cx="24" cy="24" r="8" stroke="currentColor" stroke-width="2"/>
+              <path d="M24 8V16M24 32V40M8 24H16M32 24H40" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Design</h3>
+          <p class="service-card__desc">
+            Identidades visuales, UI/UX y piezas gráficas que comunican personalidad y generan confianza desde el primer vistazo.
+          </p>
+          <ul class="service-card__list">
+            <li>Identidad de marca</li>
+            <li>UI / UX design</li>
+            <li>Brand kit completo</li>
+            <li>Motion & social assets</li>
+          </ul>
+        </div>
+
+        <div class="service-card" data-index="03">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="6" y="14" width="36" height="24" rx="2" stroke="currentColor" stroke-width="2"/>
+              <path d="M16 10H32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M18 24L22 28L30 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Systems</h3>
+          <p class="service-card__desc">
+            Desarrollamos las herramientas internas que hacen que tu negocio opere mejor: POS, facturación, flujos y automatizaciones.
+          </p>
+          <ul class="service-card__list">
+            <li>Sistemas POS</li>
+            <li>Facturación electrónica</li>
+            <li>Automatización de flujos</li>
+            <li>Dashboards internos</li>
+          </ul>
+        </div>
+
+        <div class="service-card" data-index="04">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 36L18 22L26 30L34 16L40 22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="40" cy="14" r="4" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Growth</h3>
+          <p class="service-card__desc">
+            Estrategias de contenido, presencia digital y campañas diseñadas para atraer, convertir y retener clientes reales.
+          </p>
+          <ul class="service-card__list">
+            <li>Social media strategy</li>
+            <li>Contenido & reels</li>
+            <li>Email marketing</li>
+            <li>SEO & paid media</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section class="work" id="work">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-label">Portafolio</p>
+        <h2 class="section-title">Trabajo <em>seleccionado</em></h2>
+      </div>
+    </div>
+
+    <div class="work__grid">
+
+      <!-- La Vera Pizza — real client, featured -->
+      <article class="project-card project-card--featured" data-tag="real">
+        <div class="project-card__media">
+          <div class="project-card__placeholder" style="--c1:#C0392B;--c2:#922B21;">
+            <span class="project-card__placeholder-text">La Vera Pizza</span>
+          </div>
+        </div>
+        <div class="project-card__info">
+          <div class="project-card__meta">
+            <span class="tag tag--real">Cliente real</span>
+            <span class="tag">Strategy</span>
+            <span class="tag">Design</span>
+            <span class="tag">Systems</span>
+          </div>
+          <h3 class="project-card__title">La Vera Pizza</h3>
+          <p class="project-card__desc">
+            Identidad visual completa, brand kit, sistema POS con facturación electrónica y pantalla de órdenes para cocina. Un ecosistema end-to-end para una pizzería costarricense.
+          </p>
+          <div class="project-card__deliverables">
+            <div class="deliverable">
+              <span class="deliverable__icon">🎨</span>
+              <span>Brand Kit</span>
+            </div>
+            <div class="deliverable">
+              <span class="deliverable__icon">🖥</span>
+              <span>Sistema POS & Facturación</span>
+            </div>
+            <div class="deliverable">
+              <span class="deliverable__icon">📋</span>
+              <span>Pantalla de Cocina</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Natura Market -->
+      <article class="project-card" data-tag="concept">
+        <div class="project-card__media">
+          <div class="project-card__placeholder" style="--c1:#27AE60;--c2:#1E8449;">
+            <span class="project-card__placeholder-text">Natura Market</span>
+          </div>
+        </div>
+        <div class="project-card__info">
+          <div class="project-card__meta">
+            <span class="tag tag--concept">Concepto</span>
+            <span class="tag">Design</span>
+            <span class="tag">Growth</span>
+          </div>
+          <h3 class="project-card__title">Natura Market</h3>
+          <p class="project-card__desc">
+            Marca e identidad para un mercado orgánico local. Sistema de packaging, paleta natural y estrategia de contenido para Instagram.
+          </p>
+        </div>
+      </article>
+
+      <!-- Nova Real Estate -->
+      <article class="project-card" data-tag="concept">
+        <div class="project-card__media">
+          <div class="project-card__placeholder" style="--c1:#2C3E50;--c2:#1A252F;">
+            <span class="project-card__placeholder-text">Nova Real Estate</span>
+          </div>
+        </div>
+        <div class="project-card__info">
+          <div class="project-card__meta">
+            <span class="tag tag--concept">Concepto</span>
+            <span class="tag">Strategy</span>
+            <span class="tag">Design</span>
+          </div>
+          <h3 class="project-card__title">Nova Real Estate</h3>
+          <p class="project-card__desc">
+            Identidad premium para inmobiliaria boutique. Logotipo, tipografía editorial y UI para plataforma de listados de propiedades.
+          </p>
+        </div>
+      </article>
+
+      <!-- Burger House -->
+      <article class="project-card" data-tag="concept">
+        <div class="project-card__media">
+          <div class="project-card__placeholder" style="--c1:#E67E22;--c2:#CA6F1E;">
+            <span class="project-card__placeholder-text">Burger House</span>
+          </div>
+        </div>
+        <div class="project-card__info">
+          <div class="project-card__meta">
+            <span class="tag tag--concept">Concepto</span>
+            <span class="tag">Design</span>
+            <span class="tag">Systems</span>
+          </div>
+          <h3 class="project-card__title">Burger House</h3>
+          <p class="project-card__desc">
+            Rebrand completo y sistema de pedidos digitales para cadena de hamburguesas. Menú interactivo, kiosco y gestión de mesas.
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container about__inner">
+      <div class="about__text">
+        <div class="section-head section-head--left">
+          <p class="section-label">El estudio</p>
+          <h2 class="section-title">Un estudio que<br /><em>piensa y hace</em></h2>
+        </div>
+        <p class="about__body">
+          Montevo Studio nació de la convicción de que los negocios pequeños y medianos merecen la misma calidad de estrategia, diseño y tecnología que las grandes empresas — sin la complejidad ni los precios inflados.
+        </p>
+        <p class="about__body">
+          Combinamos pensamiento estratégico con ejecución creativa y técnica. No somos solo diseñadores, ni solo desarrolladores — somos un equipo que entiende el negocio completo y construye las piezas que lo hacen funcionar mejor.
+        </p>
+        <div class="about__stats">
+          <div class="stat">
+            <span class="stat__num">4</span>
+            <span class="stat__label">disciplinas</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">1</span>
+            <span class="stat__label">estudio</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">∞</span>
+            <span class="stat__label">posibilidades</span>
+          </div>
+        </div>
+      </div>
+      <div class="about__visual">
+        <div class="about__card">
+          <p class="about__quote">"Construimos marcas que se quedan — con estrategia, diseño y tecnología que trabajan juntos."</p>
+          <div class="about__author">
+            <div class="about__author-avatar"></div>
+            <div>
+              <strong>Jean Carlo Villamonte</strong>
+              <span>Founder, Montevo Studio</span>
+            </div>
+          </div>
+        </div>
+        <div class="about__decoration"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-label">Contacto</p>
+        <h2 class="section-title">¿Tienes un proyecto<br /><em>en mente?</em></h2>
+        <p class="contact__sub">Cuéntanos de qué se trata. Respondemos en menos de 24 horas.</p>
+      </div>
+      <div class="contact__channels">
+        <a href="https://wa.me/50663331383" target="_blank" rel="noopener" class="channel-card">
+          <div class="channel-card__icon channel-card__icon--wa">
+            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+          </div>
+          <div class="channel-card__text">
+            <span class="channel-card__label">WhatsApp</span>
+            <span class="channel-card__value">+506 6333 1383</span>
+          </div>
+          <span class="channel-card__arrow">→</span>
+        </a>
+
+        <a href="https://instagram.com/montevo.studio" target="_blank" rel="noopener" class="channel-card">
+          <div class="channel-card__icon channel-card__icon--ig">
+            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+          </div>
+          <div class="channel-card__text">
+            <span class="channel-card__label">Instagram</span>
+            <span class="channel-card__value">@montevo.studio</span>
+          </div>
+          <span class="channel-card__arrow">→</span>
+        </a>
+
+        <a href="mailto:montevostudio@outlook.com" class="channel-card">
+          <div class="channel-card__icon channel-card__icon--email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="M2 7l10 7 10-7"/>
+            </svg>
+          </div>
+          <div class="channel-card__text">
+            <span class="channel-card__label">Email</span>
+            <span class="channel-card__value">montevostudio@outlook.com</span>
+          </div>
+          <span class="channel-card__arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="footer__name">Montevo Studio</span>
+        <span class="footer__tagline">Strategy · Design · Systems · Growth</span>
+      </div>
+      <p class="footer__copy">© 2025 Montevo Studio. Todos los derechos reservados.</p>
+      <div class="footer__social">
+        <a href="https://instagram.com/montevo.studio" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+          </svg>
+        </a>
+        <a href="https://wa.me/50663331383" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
