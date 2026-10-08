@@ -14,6 +14,11 @@ import { initDemos } from './modules/demos';
 import { initFaq } from './modules/faq';
 import { initStack } from './modules/stack';
 import { stack } from './content/stack';
+import { initRotator } from './modules/rotator';
+import { initMarquee } from './modules/marquee';
+import { initGlow } from './modules/glow';
+import { initTilt } from './modules/tilt';
+import { initCounters } from './modules/count';
 
 if (import.meta.env.DEV) {
   const seen = new Set<string>();
@@ -40,4 +45,9 @@ initMascot();
 initMagnetic();
 initDemos();
 initFaq();
+initRotator();
+initMarquee();
+initGlow();
+initTilt(grid);
+initCounters();
 initCase(projects, grid);
