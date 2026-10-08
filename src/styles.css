@@ -927,3 +927,53 @@ html.is-locked, html.is-locked body { overflow: hidden; }
 @media (max-width: 900px) {
   .bubble { left: 46%; top: -4%; max-width: 190px; font-size: .875rem; }
 }
+
+/* === CONTACT FORM === */
+.contact__grid { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 96px); align-items: start; }
+.contact__aside { padding-top: 28px; }
+.contact__aside p { color: var(--night-mute); margin-bottom: 18px; }
+.contact .btn--line { color: var(--paper); box-shadow: inset 0 0 0 1.5px var(--night-line); }
+.contact .btn--line:hover { box-shadow: inset 0 0 0 1.5px var(--paper); }
+.form { display: grid; gap: 28px; }
+.form__row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.field { display: grid; gap: 10px; border: 0; min-width: 0; }
+.field label, .field legend { font-size: .9375rem; color: var(--night-mute); padding: 0; }
+.field legend { margin-bottom: 10px; }
+.field input, .field textarea {
+  width: 100%; font: inherit; font-size: 1.125rem; color: var(--paper);
+  background: transparent; border: 0; border-bottom: 1.5px solid var(--night-line);
+  padding: 10px 0 8px; border-radius: 0; resize: vertical;
+  transition: border-color .3s;
+}
+.field textarea { min-height: 120px; }
+.field input::placeholder, .field textarea::placeholder { color: rgba(176, 159, 143, .55); }
+.field input:focus, .field textarea:focus { outline: none; border-color: var(--copper); }
+.field input:focus-visible, .field textarea:focus-visible { outline: none; }
+.field .is-invalid { border-color: #E07A5F; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips label { position: relative; cursor: pointer; }
+.chips input { position: absolute; opacity: 0; inset: 0; cursor: pointer; }
+.chips span {
+  display: inline-block; padding: 10px 16px 8px; border-radius: 999px;
+  box-shadow: inset 0 0 0 1px var(--night-line); color: var(--paper); font-size: .9375rem;
+  transition: background-color .3s, color .3s, box-shadow .3s, transform .4s var(--ease-spring);
+}
+.chips label:hover span { box-shadow: inset 0 0 0 1px var(--night-mute); }
+.chips input:checked + span { background: var(--copper); color: var(--paper); box-shadow: none; }
+.chips input:active + span { transform: scale(.94); }
+.chips input:focus-visible + span { outline: 2px solid var(--copper); outline-offset: 3px; }
+.form__hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.form__foot { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+.form__submit[disabled] { opacity: .6; pointer-events: none; }
+.form__status { font-size: 1rem; color: var(--night-mute); }
+.form__status.is-ok { color: #8FD69B; }
+.form__status.is-error { color: #F0A08A; }
+.form.is-sent .field, .form.is-sent .form__row { opacity: .4; pointer-events: none; transition: opacity .6s; }
+
+@media (max-width: 900px) {
+  .contact__grid { grid-template-columns: 1fr; }
+  .contact__aside { padding-top: 0; }
+}
+@media (max-width: 640px) {
+  .form__row { grid-template-columns: 1fr; }
+}
