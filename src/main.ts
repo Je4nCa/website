@@ -10,6 +10,8 @@ import { initWork } from './modules/work';
 import { initMascot } from './modules/mascot';
 import { initMagnetic } from './modules/magnetic';
 import { initCase } from './modules/case';
+import { initDemos } from './modules/demos';
+import { initFaq } from './modules/faq';
 
 if (import.meta.env.DEV) {
   const seen = new Set<string>();
@@ -33,4 +35,6 @@ const scroll = initScroll(scrubWords);
 initServices();
 initMascot();
 initMagnetic();
+initDemos();
+initFaq();
 initCase(projects, grid);

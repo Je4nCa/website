@@ -30,8 +30,9 @@
       </a>
       <nav class="nav__links" id="navLinks" aria-label="Principal">
         <a href="#services">Servicios</a>
+        <a href="#demos">Ejemplos</a>
         <a href="#work">Trabajo</a>
-        <a href="#about">Estudio</a>
+        <a href="#process">Proceso</a>
         <a href="#contact" class="nav__cta">Hablemos</a>
       </nav>
       <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
@@ -141,6 +142,119 @@
       </div>
     </section>
 
+    <!-- DEMOS -->
+    <section class="demos" id="demos">
+      <div class="wrap">
+        <header class="section-head demos__head" data-reveal>
+          <p class="eyebrow">Ejemplos en vivo</p>
+          <h2 class="section-title">Así se ve<br /><span class="muted">por dentro.</span></h2>
+        </header>
+
+        <div class="demos__tabs filters" role="tablist" aria-label="Elegir ejemplo" data-reveal>
+          <span class="filters__pill" aria-hidden="true"></span>
+          <button role="tab" id="tab-invoice" aria-selected="true" aria-controls="demo-invoice" data-demo="invoice">Facturación</button>
+          <button role="tab" id="tab-stock" aria-selected="false" aria-controls="demo-stock" data-demo="stock">Inventario</button>
+          <button role="tab" id="tab-app" aria-selected="false" aria-controls="demo-app" data-demo="app">App<span class="hide-sm"> multiplataforma</span></button>
+        </div>
+
+        <div class="demos__stage" data-reveal>
+          <!-- Facturación -->
+          <div class="demo is-active" id="demo-invoice" role="tabpanel" aria-labelledby="tab-invoice">
+            <div class="demo__copy">
+              <h3>Una factura válida en segundos.</h3>
+              <p>El sistema arma el comprobante, lo firma con tu llave criptográfica y lo envía a Hacienda. Tú solo ves el resultado.</p>
+              <ul class="demo__points">
+                <li>Clave numérica de 50 dígitos y consecutivo automáticos</li>
+                <li>IVA calculado por línea</li>
+                <li>Respuesta de Hacienda guardada con cada factura</li>
+                <li>PDF y XML enviados al correo del cliente</li>
+              </ul>
+            </div>
+            <div class="window" aria-hidden="true">
+              <div class="window__bar"><i></i><i></i><i></i><span>Factura electrónica · ejemplo</span></div>
+              <div class="invoice">
+                <div class="invoice__top">
+                  <div>
+                    <small>Cliente</small>
+                    <strong>Café Montaña S.A.</strong>
+                    <span>Cédula jurídica 3-101-000000</span>
+                  </div>
+                  <div class="invoice__status" data-invoice-status><span class="dot"></span><b>Firmando</b></div>
+                </div>
+                <div class="invoice__key">
+                  <small>Clave numérica</small>
+                  <code data-invoice-key>50608102600310100000000100001010000000123148302719</code>
+                </div>
+                <table class="invoice__lines">
+                  <thead><tr><th>Detalle</th><th>Cant.</th><th>Precio</th><th>Total</th></tr></thead>
+                  <tbody>
+                    <tr><td>Café molido 1 kg</td><td>12</td><td>₡6 500</td><td>₡78 000</td></tr>
+                    <tr><td>Taza de cerámica</td><td>24</td><td>₡3 200</td><td>₡76 800</td></tr>
+                  </tbody>
+                </table>
+                <dl class="invoice__totals">
+                  <div><dt>Subtotal</dt><dd>₡154 800</dd></div>
+                  <div><dt>IVA 13 %</dt><dd>₡20 124</dd></div>
+                  <div class="is-total"><dt>Total</dt><dd>₡174 924</dd></div>
+                </dl>
+              </div>
+            </div>
+          </div>
+
+          <!-- Inventario -->
+          <div class="demo" id="demo-stock" role="tabpanel" aria-labelledby="tab-stock">
+            <div class="demo__copy">
+              <h3>Tu inventario se mueve solo.</h3>
+              <p>Cada venta descuenta del stock en el momento. Cuando algo se está acabando, te enteras antes de que falte.</p>
+              <ul class="demo__points">
+                <li>Existencias por producto y por sucursal</li>
+                <li>Alertas de stock bajo</li>
+                <li>Conectado al punto de venta y al catálogo en línea</li>
+                <li>Reportes de lo que más se vende</li>
+              </ul>
+            </div>
+            <div class="window" aria-hidden="true">
+              <div class="window__bar"><i></i><i></i><i></i><span>Inventario · ejemplo</span></div>
+              <div class="stock">
+                <div class="stock__rows" data-stock></div>
+                <div class="stock__toast" data-stock-toast></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- App -->
+          <div class="demo" id="demo-app" role="tabpanel" aria-labelledby="tab-app">
+            <div class="demo__copy">
+              <h3>Un código. Todas las pantallas.</h3>
+              <p>La misma app corre en el teléfono de tu cliente y en la computadora de tu equipo, siempre sincronizada. Pruébalo: agrega un producto en el teléfono.</p>
+              <ul class="demo__points">
+                <li>iOS, Android, web y escritorio</li>
+                <li>Publicada en App Store y Google Play</li>
+                <li>Notificaciones, cámara y pagos</li>
+                <li>Un solo proyecto que mantener</li>
+              </ul>
+            </div>
+            <div class="devices">
+              <div class="device device--phone">
+                <div class="appui">
+                  <div class="appui__head"><strong>Menú</strong><span class="appui__cart" data-app-count-phone>0</span></div>
+                  <div class="appui__list" data-app-menu></div>
+                </div>
+              </div>
+              <div class="device device--desk" aria-hidden="true">
+                <div class="window__bar"><i></i><i></i><i></i><span>Panel de pedidos</span></div>
+                <div class="appui appui--desk">
+                  <div class="appui__head"><strong>Pedido en curso</strong><span class="appui__cart" data-app-count-desk>0</span></div>
+                  <ul class="appui__order" data-app-order><li class="appui__empty">Sin productos todavía</li></ul>
+                  <div class="appui__total"><span>Total</span><b data-app-total>₡0</b></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- WORK -->
     <section class="work" id="work">
       <div class="wrap">
@@ -160,6 +274,48 @@
       </div>
     </section>
 
+    <!-- PROCESS -->
+    <section class="process" id="process">
+      <div class="wrap">
+        <header class="section-head" data-reveal>
+          <p class="eyebrow">Cómo trabajamos</p>
+          <h2 class="section-title">De la idea<br /><span class="muted">al lanzamiento.</span></h2>
+        </header>
+        <ol class="steps" data-steps>
+          <li class="step" data-reveal>
+            <span class="step__num">01</span>
+            <h3>Diagnóstico</h3>
+            <p>Conversamos sobre tu negocio y definimos qué tiene que resolver el software. Sales con un alcance y una cotización claros.</p>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num">02</span>
+            <h3>Diseño</h3>
+            <p>Prototipos navegables antes de escribir código, para que veas y ajustes cómo va a funcionar.</p>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num">03</span>
+            <h3>Desarrollo</h3>
+            <p>Entregas por etapas que puedes probar desde el principio. Sin esperar meses para ver resultados.</p>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num">04</span>
+            <h3>Lanzamiento y soporte</h3>
+            <p>Publicamos, capacitamos a tu equipo y nos quedamos para el mantenimiento.</p>
+          </li>
+        </ol>
+
+        <div class="sectors">
+          <p class="sectors__label" data-reveal>Para quién trabajamos</p>
+          <ul class="sectors__grid">
+            <li data-reveal><h3>Restaurantes y cafeterías</h3><p>Punto de venta, comandas a cocina y facturación electrónica.</p></li>
+            <li data-reveal><h3>Comercios y tiendas</h3><p>Inventario, catálogo en línea y ventas desde el celular.</p></li>
+            <li data-reveal><h3>Servicios profesionales</h3><p>Citas, expedientes de clientes y cobros.</p></li>
+            <li data-reveal><h3>Emprendimientos</h3><p>De la idea a una primera versión de tu app o plataforma.</p></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <!-- ABOUT -->
     <section class="about" id="about">
       <div class="wrap about__inner">
@@ -176,6 +332,42 @@
             <span><strong>Jean Carlo Villamonte</strong><br />Founder, Montevo Studio</span>
           </figcaption>
         </figure>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+      <div class="wrap faq__inner">
+        <header class="section-head" data-reveal>
+          <p class="eyebrow">Preguntas frecuentes</p>
+          <h2 class="section-title">Lo que más<br /><span class="muted">nos preguntan.</span></h2>
+        </header>
+        <div class="faq__list" data-faq>
+          <div class="qa" data-reveal>
+            <h3><button aria-expanded="false" aria-controls="qa1" id="qa1-q">¿Qué necesito para empezar a facturar electrónicamente?<span class="qa__icon" aria-hidden="true"></span></button></h3>
+            <div class="qa__a" id="qa1" role="region" aria-labelledby="qa1-q"><div><p>Estar inscrito en Hacienda y tener acceso a ATV. Desde ahí se generan la llave criptográfica y el usuario que usa el sistema para enviar tus comprobantes. Si todavía no los tienes, te guiamos paso a paso.</p></div></div>
+          </div>
+          <div class="qa" data-reveal>
+            <h3><button aria-expanded="false" aria-controls="qa2" id="qa2-q">¿Sirve para régimen simplificado y para sociedades?<span class="qa__icon" aria-hidden="true"></span></button></h3>
+            <div class="qa__a" id="qa2" role="region" aria-labelledby="qa2-q"><div><p>Sí. El sistema se configura según tu tipo de contribuyente: persona física, régimen simplificado o persona jurídica.</p></div></div>
+          </div>
+          <div class="qa" data-reveal>
+            <h3><button aria-expanded="false" aria-controls="qa3" id="qa3-q">¿Cuánto tarda un proyecto?<span class="qa__icon" aria-hidden="true"></span></button></h3>
+            <div class="qa__a" id="qa3" role="region" aria-labelledby="qa3-q"><div><p>Depende del alcance. Un sitio web suele tomar algunas semanas; un sistema o una app a la medida, algunos meses. En el diagnóstico te damos un calendario concreto.</p></div></div>
+          </div>
+          <div class="qa" data-reveal>
+            <h3><button aria-expanded="false" aria-controls="qa4" id="qa4-q">¿Puedo actualizar mi sitio o mi catálogo yo mismo?<span class="qa__icon" aria-hidden="true"></span></button></h3>
+            <div class="qa__a" id="qa4" role="region" aria-labelledby="qa4-q"><div><p>Si lo necesitas, incluimos un panel de administración para que tú o tu equipo cambien textos, productos y precios sin tocar código.</p></div></div>
+          </div>
+          <div class="qa" data-reveal>
+            <h3><button aria-expanded="false" aria-controls="qa5" id="qa5-q">¿Una app multiplataforma funciona igual que una nativa?<span class="qa__icon" aria-hidden="true"></span></button></h3>
+            <div class="qa__a" id="qa5" role="region" aria-labelledby="qa5-q"><div><p>Para la gran mayoría de negocios, sí. Se publica en App Store y Google Play, usa cámara, notificaciones y pagos, y tienes un solo proyecto que mantener en lugar de dos o tres.</p></div></div>
+          </div>
+          <div class="qa" data-reveal>
+            <h3><button aria-expanded="false" aria-controls="qa6" id="qa6-q">¿Qué pasa después del lanzamiento?<span class="qa__icon" aria-hidden="true"></span></button></h3>
+            <div class="qa__a" id="qa6" role="region" aria-labelledby="qa6-q"><div><p>Ofrecemos mantenimiento: actualizaciones, respaldos, cambios pequeños y soporte cuando algo falla.</p></div></div>
+          </div>
+        </div>
       </div>
     </section>
 
