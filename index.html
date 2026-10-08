@@ -6,7 +6,14 @@
   <title>Montevo Studio — Websites, apps y sistemas a la medida</title>
   <meta name="description" content="Montevo Studio es el estudio de software de Jean Carlo Villamonte Murillo en Costa Rica: websites, apps, sistemas de facturación e inventario, portafolios e invitaciones interactivas para negocios y personas." />
   <meta name="theme-color" content="#F2EBE2" />
+  <link rel="canonical" href="https://montevostudio.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://montevostudio.com/" />
   <meta property="og:title" content="Montevo Studio" />
+  <meta property="og:image" content="https://montevostudio.com/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta property="og:description" content="Le doy vida a tu idea: websites, apps, sistemas, portafolios e invitaciones interactivas." />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -414,8 +421,47 @@
         <p class="status" data-reveal><span class="status__dot"></span>Aceptando proyectos nuevos</p>
         <h2 class="contact__title" data-split>¿Tienes un proyecto en mente?</h2>
         <p class="contact__sub" data-reveal>Cuéntame de qué se trata. Respondo en menos de 24 horas.</p>
-        <div data-reveal>
-          <a href="https://wa.me/50663331383" target="_blank" rel="noopener" class="btn btn--solid btn--xl" data-magnetic><span>Escríbeme por WhatsApp</span></a>
+        <div class="contact__grid">
+          <form class="form" id="contactForm" novalidate data-reveal>
+            <div class="form__row">
+              <div class="field">
+                <label for="f-nombre">Tu nombre</label>
+                <input id="f-nombre" name="nombre" autocomplete="name" required maxlength="120" />
+              </div>
+              <div class="field">
+                <label for="f-contacto">Correo o WhatsApp</label>
+                <input id="f-contacto" name="contacto" autocomplete="email" required maxlength="160" />
+              </div>
+            </div>
+            <fieldset class="field">
+              <legend>¿Qué necesitas?</legend>
+              <div class="chips">
+                <label><input type="radio" name="tipo" value="Website" checked /><span>Website</span></label>
+                <label><input type="radio" name="tipo" value="App" /><span>App</span></label>
+                <label><input type="radio" name="tipo" value="Facturación" /><span>Facturación</span></label>
+                <label><input type="radio" name="tipo" value="Sistema" /><span>Sistema</span></label>
+                <label><input type="radio" name="tipo" value="Portafolio" /><span>Portafolio</span></label>
+                <label><input type="radio" name="tipo" value="Invitación" /><span>Invitación</span></label>
+                <label><input type="radio" name="tipo" value="Otro" /><span>Otro</span></label>
+              </div>
+            </fieldset>
+            <div class="field">
+              <label for="f-mensaje">Cuéntame tu idea</label>
+              <textarea id="f-mensaje" name="mensaje" rows="4" required minlength="10" maxlength="4000" placeholder="Qué quieres lograr, para cuándo y cualquier detalle que ayude."></textarea>
+            </div>
+            <div class="form__hp" aria-hidden="true">
+              <label for="f-sitio">No llenar</label>
+              <input id="f-sitio" name="sitio" tabindex="-1" autocomplete="off" />
+            </div>
+            <div class="form__foot">
+              <button class="btn btn--solid btn--xl form__submit" type="submit" data-magnetic><span>Enviar mensaje</span></button>
+              <p class="form__status" id="formStatus" role="status"></p>
+            </div>
+          </form>
+          <aside class="contact__aside" data-reveal>
+            <p>¿Prefieres algo más rápido?</p>
+            <a href="https://wa.me/50663331383" target="_blank" rel="noopener" class="btn btn--line btn--xl"><span>Escríbeme por WhatsApp</span></a>
+          </aside>
         </div>
         <ul class="channels">
           <li data-reveal><a href="https://wa.me/50663331383" target="_blank" rel="noopener"><span class="channels__label">WhatsApp</span><span class="channels__value">+506 6333 1383</span><span class="channels__arrow" aria-hidden="true">→</span></a></li>

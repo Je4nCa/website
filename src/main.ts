@@ -19,6 +19,7 @@ import { initMarquee } from './modules/marquee';
 import { initGlow } from './modules/glow';
 import { initTilt } from './modules/tilt';
 import { initCounters } from './modules/count';
+import { initContact } from './modules/contact';
 
 if (import.meta.env.DEV) {
   const seen = new Set<string>();
@@ -50,4 +51,5 @@ initMarquee();
 initGlow();
 initTilt(grid);
 initCounters();
+initContact();
 initCase(projects, grid);
