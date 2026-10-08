@@ -12,6 +12,8 @@ import { initMagnetic } from './modules/magnetic';
 import { initCase } from './modules/case';
 import { initDemos } from './modules/demos';
 import { initFaq } from './modules/faq';
+import { initStack } from './modules/stack';
+import { stack } from './content/stack';
 
 if (import.meta.env.DEV) {
   const seen = new Set<string>();
@@ -29,6 +31,7 @@ $('.hero__title')?.style.setProperty('--d', '80ms');
 const scrubWords = splitScrub($('[data-scrub]'));
 
 const grid = initWork(projects, () => scroll.remeasure());
+initStack(stack);
 initReveal();
 initNav();
 const scroll = initScroll(scrubWords);

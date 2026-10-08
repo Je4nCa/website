@@ -618,6 +618,23 @@ ul { list-style: none; }
 .qa.is-open .qa__a { grid-template-rows: 1fr; }
 .qa.is-open .qa__a p { opacity: 1; transform: none; transition-delay: .1s; }
 
+/* === STACK === */
+.stack { padding: 0 0 clamp(96px, 14vw, 180px); }
+.stack__head { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; flex-wrap: wrap; }
+.stack__intro { max-width: 40ch; font-weight: 300; color: var(--ink-2); }
+.stack__grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; }
+.tool {
+  background: var(--surface);
+  border-radius: 20px;
+  padding: 28px 22px 22px;
+  transition: transform .6s var(--ease-out), box-shadow .6s var(--ease-out);
+}
+.tool svg { width: 32px; height: 32px; fill: var(--ink); margin-bottom: 28px; transition: fill .4s, transform .6s var(--ease-spring); }
+.tool h3 { font-size: 1.125rem; font-weight: 500; letter-spacing: -.02em; margin-bottom: 6px; }
+.tool p { font-size: .875rem; font-weight: 300; color: var(--ink-2); line-height: 1.4; }
+.tool:hover { transform: translateY(-4px); box-shadow: 0 24px 48px -24px rgba(38,28,21,.25); }
+.tool:hover svg { fill: var(--brand); transform: scale(1.1); }
+
 /* === ABOUT === */
 .about { padding: 0 0 clamp(96px, 14vw, 180px); }
 .about__inner { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(48px, 8vw, 120px); align-items: end; }
@@ -781,6 +798,7 @@ html.is-locked, html.is-locked body { overflow: hidden; }
   .about__inner { grid-template-columns: 1fr; }
   .demo { grid-template-columns: 1fr; align-items: start; }
   .steps, .sectors__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stack__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .faq__inner { grid-template-columns: 1fr; }
   .faq__inner .section-head { position: static; }
   .case__head, .case__story { grid-template-columns: 1fr; }
@@ -789,6 +807,9 @@ html.is-locked, html.is-locked body { overflow: hidden; }
 @media (max-width: 640px) {
   .grid { grid-template-columns: 1fr; }
   .steps, .sectors__grid { grid-template-columns: 1fr; }
+  .stack__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .tool { padding: 22px 18px 18px; }
+  .tool svg { margin-bottom: 20px; }
   .step__num { margin-bottom: 16px; }
   .devices { flex-direction: column; align-items: center; }
   .device--desk { width: 100%; }
