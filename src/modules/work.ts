@@ -1,5 +1,6 @@
 import type { Project, ProjectType } from '../types';
 import { $, $$, esc, reducedMotion, EASE_OUT } from '../lib/dom';
+import { segmented } from '../lib/segmented';
 
 export const TYPE_LABEL: Record<ProjectType, string> = { client: 'Cliente', concept: 'Concepto' };
 
@@ -32,21 +33,6 @@ const cardHTML = (p: Project) => `
 export function initWork(projects: Project[], onLayoutChange: () => void) {
   const grid = $('#projectGrid')!;
   grid.innerHTML = projects.map(cardHTML).join('');
-
-  const buttons = $$<HTMLButtonElement>('[data-filter]');
-  const pill = $('.filters__pill');
-
-  function placePill(animate = true) {
-    const active = buttons.find(b => b.getAttribute('aria-selected') === 'true');
-    if (!active || !pill) return;
-    if (!animate) pill.style.transition = 'none';
-    pill.style.width = `${active.offsetWidth}px`;
-    pill.style.transform = `translateX(${active.offsetLeft}px)`;
-    if (!animate) {
-      void pill.offsetWidth;
-      pill.style.transition = '';
-    }
-  }
 
   async function applyFilter(type: string) {
     const all = $$('.card', grid);
@@ -91,16 +77,8 @@ export function initWork(projects: Project[], onLayoutChange: () => void) {
     onLayoutChange();
   }
 
-  buttons.forEach(btn => btn.addEventListener('click', () => {
-    if (btn.getAttribute('aria-selected') === 'true') return;
-    buttons.forEach(b => b.setAttribute('aria-selected', String(b === btn)));
-    placePill();
-    applyFilter(btn.dataset.filter ?? 'all');
-  }));
-
-  placePill(false);
-  new ResizeObserver(() => placePill(false)).observe(grid);
-  document.fonts?.ready.then(() => placePill(false));
+  const filters = $('.work .filters');
+  if (filters) segmented(filters, btn => applyFilter(btn.dataset.filter ?? 'all'));
 
   return grid;
 }
