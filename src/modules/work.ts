@@ -77,8 +77,11 @@ export function initWork(projects: Project[], onLayoutChange: () => void) {
     onLayoutChange();
   }
 
+  // Filters only make sense once there are both client and concept projects.
   const filters = $('.work .filters');
-  if (filters) segmented(filters, btn => applyFilter(btn.dataset.filter ?? 'all'));
+  const types = new Set(projects.map(p => p.type));
+  if (filters && types.size > 1) segmented(filters, btn => applyFilter(btn.dataset.filter ?? 'all'));
+  else filters?.remove();
 
   return grid;
 }
