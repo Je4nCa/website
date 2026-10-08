@@ -1,8 +1,8 @@
 /** Las líneas de trabajo del estudio. Se muestran como etiquetas en cada proyecto. */
 export type Service = 'Web' | 'Apps' | 'Facturación' | 'Sistemas' | 'Diseño';
 
-/** `client` = cliente real · `concept` = proyecto conceptual. */
-export type ProjectType = 'client' | 'concept';
+/** `client` = hecho para un cliente · `product` = producto propio de Montevo · `concept` = proyecto conceptual. */
+export type ProjectType = 'client' | 'product' | 'concept';
 
 export interface Project {
   /** Único, en minúsculas y con guiones. Va en la URL: #/proyecto/<slug> */
@@ -23,8 +23,10 @@ export interface Project {
   colors: [string, string];
   /** Ruta dentro de /public. Ej: 'projects/la-vera-pizza/cover.jpg' */
   cover?: string;
-  /** Rutas dentro de /public. */
+  /** Rutas dentro de /public. Las capturas verticales (de celular) se muestran con marco de teléfono. */
   gallery?: string[];
+  /** Link al proyecto en vivo, opcional. */
+  url?: string;
   /** true = tarjeta a todo el ancho. */
   featured?: boolean;
 }
