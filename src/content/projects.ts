@@ -44,7 +44,7 @@ export const projects: Project[] = [
       'Una sola base de código para la app del cliente en iOS y Android, el kiosco de autoservicio y el panel de gestión de mesas.',
     ],
     deliverables: ['App iOS y Android', 'Kiosco de autoservicio', 'Gestión de mesas'],
-    colors: ['#E67E22', '#6B330A'],
+    colors: ['#C98A4B', '#5A3417'],
   },
   {
     slug: 'natura-market',
@@ -59,7 +59,7 @@ export const projects: Project[] = [
       'Cuando un producto se agota en el local, desaparece del catálogo. Sin hojas de cálculo de por medio.',
     ],
     deliverables: ['Catálogo web', 'Sistema de inventario', 'Panel de administración'],
-    colors: ['#2F8F55', '#123B24'],
+    colors: ['#B8A07E', '#5E4A33'],
   },
   {
     slug: 'nova-real-estate',
@@ -74,6 +74,6 @@ export const projects: Project[] = [
       'Búsqueda por zona y precio, fichas de propiedad rápidas de cargar y un panel donde el equipo publica y edita sin tocar código.',
     ],
     deliverables: ['Sitio web', 'Buscador de propiedades', 'Panel de administración'],
-    colors: ['#34495E', '#11181F'],
+    colors: ['#6B4F3A', '#261B13'],
   },
 ];
