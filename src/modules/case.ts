@@ -31,12 +31,18 @@ export function initCase(projects: Project[], grid: HTMLElement) {
     if (p.stack?.length) meta.push(['Tecnología', p.stack.map(s => `<span class="tag">${esc(s)}</span>`).join('')]);
 
     cover.innerHTML = coverHTML(p, { eager: true });
+    // phone screenshots get a device frame instead of spanning the page
+    queueMicrotask(() => $$<HTMLImageElement>('.case__gallery img', body).forEach(img => {
+      const mark = () => img.classList.toggle('is-portrait', img.naturalHeight > img.naturalWidth);
+      if (img.complete) mark(); else img.addEventListener('load', mark, { once: true });
+    }));
     body.innerHTML = `
       <div class="case__head">
         <div>
           <p class="eyebrow">${TYPE_LABEL[p.type]}</p>
           <h1 class="case__title" id="caseTitle">${esc(p.title)}</h1>
           <p class="case__summary">${esc(p.summary)}</p>
+          ${p.url ? `<a class="btn btn--solid case__visit" href="${esc(p.url)}" target="_blank" rel="noopener"><span>Visitar ${esc(p.url.replace(/^https?:\/\//, '').replace(/\/$/, ''))} ↗</span></a>` : ''}
         </div>
         <dl class="case__meta">
           ${meta.map(([k, v]) => `<div${v.includes('class="tag"') ? ' class="case__meta-wide"' : ''}><dt>${k}</dt><dd class="tags">${v}</dd></div>`).join('')}
@@ -49,7 +55,7 @@ export function initCase(projects: Project[], grid: HTMLElement) {
           ${p.deliverables.length ? `<ul class="case__deliverables">${p.deliverables.map(d => `<li>${esc(d)}</li>`).join('')}</ul>` : ''}
         </div>
       </div>
-      ${p.gallery?.length ? `<div class="case__gallery">${p.gallery.map(src => `<img src="${esc(src)}" alt="" loading="lazy" decoding="async" />`).join('')}</div>` : ''}
+      ${p.gallery?.length ? `<div class="case__gallery">${p.gallery.map(src => `<img src="${esc(src)}" alt="Captura de ${esc(p.title)}" loading="lazy" decoding="async" />`).join('')}</div>` : ''}
       ${next !== p ? `<a class="case__next" href="#/proyecto/${esc(next.slug)}" data-next="${esc(next.slug)}"><small>Siguiente proyecto</small><strong>${esc(next.title)} →</strong></a>` : ''}`;
   }
 

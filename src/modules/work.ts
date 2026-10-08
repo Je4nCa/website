@@ -2,7 +2,7 @@ import type { Project, ProjectType } from '../types';
 import { $, $$, esc, reducedMotion, EASE_OUT } from '../lib/dom';
 import { segmented } from '../lib/segmented';
 
-export const TYPE_LABEL: Record<ProjectType, string> = { client: 'Cliente', concept: 'Concepto' };
+export const TYPE_LABEL: Record<ProjectType, string> = { client: 'Cliente', product: 'Producto propio', concept: 'Concepto' };
 
 const MARK = '<svg class="cover__mark" viewBox="0 0 40 32" aria-hidden="true"><path d="M34 1.5v29a1 1 0 0 1-1.6.8L15 16 32.4.7A1 1 0 0 1 34 1.5Z"/><path d="M6 2.2v27.6a1.5 1.5 0 0 0 2.4 1.2l17.2-13.2a2.3 2.3 0 0 0 0-3.6L8.4 1A1.5 1.5 0 0 0 6 2.2Z"/></svg>';
 
