@@ -2,387 +2,495 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Montevo Studio — Strategy, Design, Systems & Growth</title>
-  <meta name="description" content="Montevo Studio es un estudio creativo-tecnológico que combina estrategia, diseño, sistemas y crecimiento para construir marcas que duran." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Montevo Studio — Websites, apps y sistemas a la medida</title>
+  <meta name="description" content="Montevo Studio es el estudio de software de Jean Carlo Villamonte Murillo en Costa Rica: websites, apps, sistemas de facturación e inventario, portafolios e invitaciones interactivas para negocios y personas." />
+  <meta name="theme-color" content="#F2EBE2" />
+  <link rel="canonical" href="https://montevostudio.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://montevostudio.com/" />
+  <meta property="og:title" content="Montevo Studio" />
+  <meta property="og:image" content="https://montevostudio.com/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:description" content="Le doy vida a tu idea: websites, apps, sistemas, portafolios e invitaciones interactivas." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300..700&display=swap" rel="stylesheet" />
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
+  <a class="skip" href="#main">Saltar al contenido</a>
+
   <!-- NAV -->
-  <nav class="nav" id="nav">
+  <header class="nav" id="nav">
+    <span class="nav__progress" aria-hidden="true"></span>
     <div class="nav__inner">
-      <a href="#hero" class="nav__logo">
-        <span class="nav__logo-name">Montevo Studio</span>
-        <span class="nav__logo-byline">creative &amp; tech</span>
+      <a href="#top" class="nav__brand" aria-label="Montevo Studio, inicio">
+        <svg class="mark" viewBox="0 0 40 32" aria-hidden="true">
+          <path class="mark__copper" d="M34 1.5v29a1 1 0 0 1-1.6.8L15 16 32.4.7A1 1 0 0 1 34 1.5Z"/>
+          <path class="mark__ink" d="M6 2.2v27.6a1.5 1.5 0 0 0 2.4 1.2l17.2-13.2a2.3 2.3 0 0 0 0-3.6L8.4 1A1.5 1.5 0 0 0 6 2.2Z"/>
+        </svg>
+        <span>Montevo Studio</span>
       </a>
-      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú">
-        <span></span><span></span><span></span>
+      <nav class="nav__links" id="navLinks" aria-label="Principal">
+        <a href="#services">Servicios</a>
+        <a href="#demos">Ejemplos</a>
+        <a href="#work">Trabajo</a>
+        <a href="#process">Proceso</a>
+        <a href="#contact" class="nav__cta">Hablemos</a>
+      </nav>
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span>
       </button>
-      <ul class="nav__links" id="navLinks">
-        <li><a href="#services" class="nav__link">Servicios</a></li>
-        <li><a href="#work" class="nav__link">Trabajo</a></li>
-        <li><a href="#about" class="nav__link">Estudio</a></li>
-        <li><a href="#contact" class="nav__link nav__link--cta">Hablemos</a></li>
-      </ul>
     </div>
-  </nav>
+  </header>
 
-  <!-- HERO -->
-  <div class="hero-wrapper">
-  <section class="hero" id="hero">
-    <div class="hero__content">
-      <p class="hero__label">Estudio creativo &amp; tecnológico</p>
-      <h1 class="hero__headline">
-        Construimos marcas<br />
-        <em>que se quedan.</em>
-      </h1>
-      <p class="hero__sub">
-        Estrategia, diseño, sistemas y crecimiento — todo bajo un mismo techo,
-        enfocado en resultados que importan.
-      </p>
-      <div class="hero__actions">
-        <a href="#work" class="btn btn--primary">Ver trabajo</a>
-        <a href="#contact" class="btn btn--ghost">Iniciar proyecto</a>
-      </div>
-    </div>
-    <div class="hero__visual">
-      <div class="hero__mascot-wrap">
-        <img src="assets/mascot.png" alt="Mascota Montevo Studio" class="hero__mascot" />
-      </div>
-      <div class="hero__blob"></div>
-    </div>
-    <div class="hero__scroll-hint">
-      <span>Scroll</span>
-      <div class="hero__scroll-line"></div>
-    </div>
-  </section>
+  <main id="main">
 
-  </div><!-- /.hero-wrapper -->
-
-  <!-- SERVICES -->
-  <section class="services" id="services">
-    <div class="container">
-      <div class="section-head">
-        <p class="section-label">Lo que hacemos</p>
-        <h2 class="section-title">Cuatro pilares,<br /><em>un propósito</em></h2>
-      </div>
-      <div class="services__grid">
-
-        <div class="service-card" data-index="01">
-          <div class="service-card__icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 40L24 8L40 40H8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-              <path d="M14 28H34" stroke="currentColor" stroke-width="2"/>
-            </svg>
-          </div>
-          <h3 class="service-card__title">Strategy</h3>
-          <p class="service-card__desc">
-            Definimos el rumbo: propuesta de valor, posicionamiento, arquitectura de marca y hoja de ruta para crecer con intención.
-          </p>
-          <ul class="service-card__list">
-            <li>Brand strategy</li>
-            <li>Posicionamiento</li>
-            <li>Roadmap de negocio</li>
-            <li>Investigación de mercado</li>
-          </ul>
-        </div>
-
-        <div class="service-card" data-index="02">
-          <div class="service-card__icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="8" y="8" width="32" height="32" rx="4" stroke="currentColor" stroke-width="2"/>
-              <circle cx="24" cy="24" r="8" stroke="currentColor" stroke-width="2"/>
-              <path d="M24 8V16M24 32V40M8 24H16M32 24H40" stroke="currentColor" stroke-width="2"/>
-            </svg>
-          </div>
-          <h3 class="service-card__title">Design</h3>
-          <p class="service-card__desc">
-            Identidades visuales, UI/UX y piezas gráficas que comunican personalidad y generan confianza desde el primer vistazo.
-          </p>
-          <ul class="service-card__list">
-            <li>Identidad de marca</li>
-            <li>UI / UX design</li>
-            <li>Brand kit completo</li>
-            <li>Motion & social assets</li>
-          </ul>
-        </div>
-
-        <div class="service-card" data-index="03">
-          <div class="service-card__icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="6" y="14" width="36" height="24" rx="2" stroke="currentColor" stroke-width="2"/>
-              <path d="M16 10H32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <path d="M18 24L22 28L30 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <h3 class="service-card__title">Systems</h3>
-          <p class="service-card__desc">
-            Desarrollamos las herramientas internas que hacen que tu negocio opere mejor: POS, facturación, flujos y automatizaciones.
-          </p>
-          <ul class="service-card__list">
-            <li>Sistemas POS</li>
-            <li>Facturación electrónica</li>
-            <li>Automatización de flujos</li>
-            <li>Dashboards internos</li>
-          </ul>
-        </div>
-
-        <div class="service-card" data-index="04">
-          <div class="service-card__icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 36L18 22L26 30L34 16L40 22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle cx="40" cy="14" r="4" stroke="currentColor" stroke-width="2"/>
-            </svg>
-          </div>
-          <h3 class="service-card__title">Growth</h3>
-          <p class="service-card__desc">
-            Estrategias de contenido, presencia digital y campañas diseñadas para atraer, convertir y retener clientes reales.
-          </p>
-          <ul class="service-card__list">
-            <li>Social media strategy</li>
-            <li>Contenido & reels</li>
-            <li>Email marketing</li>
-            <li>SEO & paid media</li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- WORK -->
-  <section class="work" id="work">
-    <div class="container">
-      <div class="section-head">
-        <p class="section-label">Portafolio</p>
-        <h2 class="section-title">Trabajo <em>seleccionado</em></h2>
-      </div>
-    </div>
-
-    <div class="work__grid">
-
-      <!-- La Vera Pizza — real client, featured -->
-      <article class="project-card project-card--featured" data-tag="real">
-        <div class="project-card__media">
-          <div class="project-card__placeholder" style="--c1:#C0392B;--c2:#922B21;">
-            <span class="project-card__placeholder-text">La Vera Pizza</span>
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero__inner">
+        <div class="hero__copy" data-hero-copy>
+          <p class="eyebrow" data-reveal style="--d:0ms">Jean Carlo Villamonte · Desarrollador de software · Costa Rica</p>
+          <h1 class="hero__title" data-split>Le doy vida a tu <span class="rotator" data-nosplit data-rotate="idea.,negocio.,marca.,evento.,proyecto."><span class="is-on">idea.</span></span></h1>
+          <p class="hero__sub" data-reveal style="--d:450ms">Websites, apps y sistemas para negocios, artistas y personas con una idea. Desde la facturación de tu empresa hasta tu portafolio o la invitación de tu fiesta, diseñado y programado a tu medida.</p>
+          <div class="hero__actions" data-reveal style="--d:560ms">
+            <a href="#work" class="btn btn--solid" data-magnetic><span>Ver proyectos</span></a>
+            <a href="#contact" class="btn btn--line" data-magnetic><span>Cotizar proyecto</span></a>
           </div>
         </div>
-        <div class="project-card__info">
-          <div class="project-card__meta">
-            <span class="tag tag--real">Cliente real</span>
-            <span class="tag">Strategy</span>
-            <span class="tag">Design</span>
-            <span class="tag">Systems</span>
-          </div>
-          <h3 class="project-card__title">La Vera Pizza</h3>
-          <p class="project-card__desc">
-            Identidad visual completa, brand kit, sistema POS con facturación electrónica y pantalla de órdenes para cocina. Un ecosistema end-to-end para una pizzería costarricense.
-          </p>
-          <div class="project-card__deliverables">
-            <div class="deliverable">
-              <span class="deliverable__icon">🎨</span>
-              <span>Brand Kit</span>
-            </div>
-            <div class="deliverable">
-              <span class="deliverable__icon">🖥</span>
-              <span>Sistema POS & Facturación</span>
-            </div>
-            <div class="deliverable">
-              <span class="deliverable__icon">📋</span>
-              <span>Pantalla de Cocina</span>
+
+        <div class="hero__stage" data-hero-stage>
+          <div class="mascot" id="mascot" data-reveal style="--d:200ms">
+            <p class="bubble" id="bubble" aria-live="polite"></p>
+            <div class="mascot__body">
+              <img src="./src/assets/mascot.webp" alt="La mascota de Montevo Studio sostiene una pluma y un gráfico de crecimiento" width="1412" height="1114" fetchpriority="high" />
+              <svg class="mascot__eyes" viewBox="0 0 1412 1114" aria-hidden="true">
+                <g class="eye" data-eye>
+                  <ellipse cx="562" cy="511" rx="67" ry="97" class="eye__mask" />
+                  <g class="eye__lid">
+                    <ellipse cx="562" cy="511" rx="60" ry="90" class="eye__white" />
+                    <ellipse cx="562" cy="511" rx="29" ry="44" class="eye__pupil" data-pupil />
+                  </g>
+                </g>
+                <g class="eye" data-eye>
+                  <ellipse cx="748" cy="514" rx="63" ry="95" class="eye__mask" />
+                  <g class="eye__lid">
+                    <ellipse cx="748" cy="514" rx="56" ry="88" class="eye__white" />
+                    <ellipse cx="748" cy="514" rx="27" ry="43" class="eye__pupil" data-pupil />
+                  </g>
+                </g>
+              </svg>
             </div>
           </div>
         </div>
-      </article>
+      </div>
+      <div class="hero__scroll" aria-hidden="true"><span></span></div>
+    </section>
 
-      <!-- Natura Market -->
-      <article class="project-card" data-tag="concept">
-        <div class="project-card__media">
-          <div class="project-card__placeholder" style="--c1:#27AE60;--c2:#1E8449;">
-            <span class="project-card__placeholder-text">Natura Market</span>
-          </div>
-        </div>
-        <div class="project-card__info">
-          <div class="project-card__meta">
-            <span class="tag tag--concept">Concepto</span>
-            <span class="tag">Design</span>
-            <span class="tag">Growth</span>
-          </div>
-          <h3 class="project-card__title">Natura Market</h3>
-          <p class="project-card__desc">
-            Marca e identidad para un mercado orgánico local. Sistema de packaging, paleta natural y estrategia de contenido para Instagram.
-          </p>
-        </div>
-      </article>
+    <!-- STATEMENT (scroll-driven) -->
+    <section class="statement" aria-label="Quiénes somos">
+      <div class="statement__sticky">
+        <p class="statement__text" data-scrub>Diseño y programo cosas que la gente usa de verdad: el sistema que factura en tu negocio, el portafolio que muestra tu trabajo, la invitación que todos comentan. Una sola persona a cargo, de la idea al lanzamiento.</p>
+      </div>
+    </section>
 
-      <!-- Nova Real Estate -->
-      <article class="project-card" data-tag="concept">
-        <div class="project-card__media">
-          <div class="project-card__placeholder" style="--c1:#2C3E50;--c2:#1A252F;">
-            <span class="project-card__placeholder-text">Nova Real Estate</span>
-          </div>
-        </div>
-        <div class="project-card__info">
-          <div class="project-card__meta">
-            <span class="tag tag--concept">Concepto</span>
-            <span class="tag">Strategy</span>
-            <span class="tag">Design</span>
-          </div>
-          <h3 class="project-card__title">Nova Real Estate</h3>
-          <p class="project-card__desc">
-            Identidad premium para inmobiliaria boutique. Logotipo, tipografía editorial y UI para plataforma de listados de propiedades.
-          </p>
-        </div>
-      </article>
+    <!-- SERVICES -->
+    <section class="services" id="services" data-nav="dark" data-glow>
+      <div class="wrap">
+        <header class="section-head" data-reveal>
+          <p class="eyebrow">Lo que construyo</p>
+          <h2 class="section-title">Para tu negocio.<br /><span class="muted">Y para ti.</span></h2>
+        </header>
 
-      <!-- Burger House -->
-      <article class="project-card" data-tag="concept">
-        <div class="project-card__media">
-          <div class="project-card__placeholder" style="--c1:#E67E22;--c2:#CA6F1E;">
-            <span class="project-card__placeholder-text">Burger House</span>
+        <div class="pillars">
+          <div class="pillars__stage" aria-hidden="true">
+            <div class="pillars__visual">
+              <svg viewBox="0 0 120 120" class="pillar-art is-active" data-art="0">
+                <rect x="12" y="22" width="96" height="76" rx="8" pathLength="1"/><path d="M12 40h96" pathLength="1"/><path d="M28 58h40M28 70h64M28 82h28" pathLength="1"/>
+              </svg>
+              <svg viewBox="0 0 120 120" class="pillar-art" data-art="1">
+                <rect x="14" y="20" width="38" height="78" rx="8" pathLength="1"/><path d="M28 88h10" pathLength="1"/><rect x="62" y="34" width="46" height="40" rx="5" pathLength="1"/><path d="M78 74v14M70 88h30" pathLength="1"/>
+              </svg>
+              <svg viewBox="0 0 120 120" class="pillar-art" data-art="2">
+                <path d="M30 12h60v96l-10-7-10 7-10-7-10 7-10-7-10 7Z" pathLength="1"/><path d="M42 34h36M42 48h36M42 62h20" pathLength="1"/><path d="M54 82l6 6 12-12" pathLength="1"/>
+              </svg>
+              <svg viewBox="0 0 120 120" class="pillar-art" data-art="3">
+                <rect x="18" y="64" width="38" height="38" rx="4" pathLength="1"/><rect x="64" y="64" width="38" height="38" rx="4" pathLength="1"/><rect x="41" y="18" width="38" height="38" rx="4" pathLength="1"/><path d="M30 76h14M76 76h14M53 30h14" pathLength="1"/>
+              </svg>
+              <svg viewBox="0 0 120 120" class="pillar-art" data-art="4">
+                <rect x="22" y="14" width="76" height="92" rx="8" pathLength="1"/><circle cx="60" cy="46" r="14" pathLength="1"/><path d="M38 84c4-12 13-18 22-18s18 6 22 18" pathLength="1"/><path d="M96 10l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" pathLength="1"/>
+              </svg>
+            </div>
           </div>
-        </div>
-        <div class="project-card__info">
-          <div class="project-card__meta">
-            <span class="tag tag--concept">Concepto</span>
-            <span class="tag">Design</span>
-            <span class="tag">Systems</span>
-          </div>
-          <h3 class="project-card__title">Burger House</h3>
-          <p class="project-card__desc">
-            Rebrand completo y sistema de pedidos digitales para cadena de hamburguesas. Menú interactivo, kiosco y gestión de mesas.
-          </p>
-        </div>
-      </article>
 
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="about" id="about">
-    <div class="container about__inner">
-      <div class="about__text">
-        <div class="section-head section-head--left">
-          <p class="section-label">El estudio</p>
-          <h2 class="section-title">Un estudio que<br /><em>piensa y hace</em></h2>
-        </div>
-        <p class="about__body">
-          Montevo Studio nació de la convicción de que los negocios pequeños y medianos merecen la misma calidad de estrategia, diseño y tecnología que las grandes empresas — sin la complejidad ni los precios inflados.
-        </p>
-        <p class="about__body">
-          Combinamos pensamiento estratégico con ejecución creativa y técnica. No somos solo diseñadores, ni solo desarrolladores — somos un equipo que entiende el negocio completo y construye las piezas que lo hacen funcionar mejor.
-        </p>
-        <div class="about__stats">
-          <div class="stat">
-            <span class="stat__num">4</span>
-            <span class="stat__label">disciplinas</span>
-          </div>
-          <div class="stat">
-            <span class="stat__num">1</span>
-            <span class="stat__label">estudio</span>
-          </div>
-          <div class="stat">
-            <span class="stat__num">∞</span>
-            <span class="stat__label">posibilidades</span>
+          <div class="pillars__list">
+            <article class="pillar" data-pillar="0">
+              <h3 class="pillar__name">Websites</h3>
+              <p class="pillar__desc">Sitios rápidos, accesibles y fáciles de administrar. Desde una landing que convierte hasta una tienda en línea completa.</p>
+              <ul class="pillar__list"><li>Sitios corporativos</li><li>Landing pages</li><li>Tiendas en línea</li><li>SEO técnico y rendimiento</li></ul>
+            </article>
+            <article class="pillar" data-pillar="1">
+              <h3 class="pillar__name">Apps multiplataforma</h3>
+              <p class="pillar__desc">Una sola base de código para iOS, Android, web y escritorio. La experiencia de una app nativa sin pagar tres desarrollos.</p>
+              <ul class="pillar__list"><li>iOS y Android</li><li>Apps de escritorio</li><li>Web apps (PWA)</li><li>Publicación en tiendas</li></ul>
+            </article>
+            <article class="pillar" data-pillar="2">
+              <h3 class="pillar__name">Facturación electrónica</h3>
+              <p class="pillar__desc">Sistemas de facturación conectados a Hacienda, para régimen simplificado y personas jurídicas. Comprobantes válidos, sin complicarte.</p>
+              <ul class="pillar__list"><li>Facturas y tiquetes electrónicos</li><li>Notas de crédito y débito</li><li>Régimen simplificado</li><li>Personas jurídicas</li></ul>
+            </article>
+            <article class="pillar" data-pillar="3">
+              <h3 class="pillar__name">Sistemas a la medida</h3>
+              <p class="pillar__desc">Inventarios, catálogos, puntos de venta y reportes: las herramientas internas que ordenan tu operación.</p>
+              <ul class="pillar__list"><li>Control de inventario</li><li>Catálogos digitales</li><li>Punto de venta (POS)</li><li>Dashboards y reportes</li></ul>
+            </article>
+            <article class="pillar" data-pillar="4">
+              <h3 class="pillar__name">Proyectos personales</h3>
+              <p class="pillar__desc">Para personas, artistas y momentos especiales. Una página que muestre quién eres, o una invitación que la gente quiera abrir.</p>
+              <ul class="pillar__list"><li>Portafolios personales</li><li>Páginas para artistas y bandas</li><li>Invitaciones interactivas</li><li>Confirmación de asistencia</li></ul>
+            </article>
           </div>
         </div>
       </div>
-      <div class="about__visual">
-        <div class="about__card">
-          <p class="about__quote">"Construimos marcas que se quedan — con estrategia, diseño y tecnología que trabajan juntos."</p>
-          <div class="about__author">
-            <div class="about__author-avatar"></div>
-            <div>
-              <strong>Jean Carlo Villamonte</strong>
-              <span>Founder, Montevo Studio</span>
+    </section>
+
+    <!-- DEMOS -->
+    <section class="demos" id="demos">
+      <div class="wrap">
+        <header class="section-head demos__head" data-reveal>
+          <p class="eyebrow">Ejemplos en vivo</p>
+          <h2 class="section-title">Así se ve<br /><span class="muted">por dentro.</span></h2>
+        </header>
+
+        <div class="demos__tabs filters" role="tablist" aria-label="Elegir ejemplo" data-reveal>
+          <span class="filters__pill" aria-hidden="true"></span>
+          <button role="tab" id="tab-invoice" aria-selected="true" aria-controls="demo-invoice" data-demo="invoice">Facturación</button>
+          <button role="tab" id="tab-stock" aria-selected="false" aria-controls="demo-stock" data-demo="stock">Inventario</button>
+          <button role="tab" id="tab-app" aria-selected="false" aria-controls="demo-app" data-demo="app">App<span class="hide-sm"> multiplataforma</span></button>
+        </div>
+
+        <div class="demos__stage" data-reveal>
+          <!-- Facturación -->
+          <div class="demo is-active" id="demo-invoice" role="tabpanel" aria-labelledby="tab-invoice">
+            <div class="demo__copy">
+              <h3>Una factura válida en segundos.</h3>
+              <p>El sistema arma el comprobante, lo firma con tu llave criptográfica y lo envía a Hacienda. Tú solo ves el resultado.</p>
+              <ul class="demo__points">
+                <li>Clave numérica de 50 dígitos y consecutivo automáticos</li>
+                <li>IVA calculado por línea</li>
+                <li>Respuesta de Hacienda guardada con cada factura</li>
+                <li>PDF y XML enviados al correo del cliente</li>
+              </ul>
+            </div>
+            <div class="window" aria-hidden="true">
+              <div class="window__bar"><i></i><i></i><i></i><span>Factura electrónica · ejemplo</span></div>
+              <div class="invoice">
+                <div class="invoice__top">
+                  <div>
+                    <small>Cliente</small>
+                    <strong>Café Montaña S.A.</strong>
+                    <span>Cédula jurídica 3-101-000000</span>
+                  </div>
+                  <div class="invoice__status" data-invoice-status><span class="dot"></span><b>Firmando</b></div>
+                </div>
+                <div class="invoice__key">
+                  <small>Clave numérica</small>
+                  <code data-invoice-key>50608102600310100000000100001010000000123148302719</code>
+                </div>
+                <table class="invoice__lines">
+                  <thead><tr><th>Detalle</th><th>Cant.</th><th>Precio</th><th>Total</th></tr></thead>
+                  <tbody>
+                    <tr><td>Café molido 1 kg</td><td>12</td><td>₡6 500</td><td>₡78 000</td></tr>
+                    <tr><td>Taza de cerámica</td><td>24</td><td>₡3 200</td><td>₡76 800</td></tr>
+                  </tbody>
+                </table>
+                <dl class="invoice__totals">
+                  <div><dt>Subtotal</dt><dd>₡154 800</dd></div>
+                  <div><dt>IVA 13 %</dt><dd>₡20 124</dd></div>
+                  <div class="is-total"><dt>Total</dt><dd>₡174 924</dd></div>
+                </dl>
+              </div>
+            </div>
+          </div>
+
+          <!-- Inventario -->
+          <div class="demo" id="demo-stock" role="tabpanel" aria-labelledby="tab-stock">
+            <div class="demo__copy">
+              <h3>Tu inventario se mueve solo.</h3>
+              <p>Cada venta descuenta del stock en el momento. Cuando algo se está acabando, te enteras antes de que falte.</p>
+              <ul class="demo__points">
+                <li>Existencias por producto y por sucursal</li>
+                <li>Alertas de stock bajo</li>
+                <li>Conectado al punto de venta y al catálogo en línea</li>
+                <li>Reportes de lo que más se vende</li>
+              </ul>
+            </div>
+            <div class="window" aria-hidden="true">
+              <div class="window__bar"><i></i><i></i><i></i><span>Inventario · ejemplo</span></div>
+              <div class="stock">
+                <div class="stock__rows" data-stock></div>
+                <div class="stock__toast" data-stock-toast></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- App -->
+          <div class="demo" id="demo-app" role="tabpanel" aria-labelledby="tab-app">
+            <div class="demo__copy">
+              <h3>Un código. Todas las pantallas.</h3>
+              <p>La misma app corre en el teléfono de tu cliente y en la computadora de tu equipo, siempre sincronizada. Pruébalo: agrega un producto en el teléfono.</p>
+              <ul class="demo__points">
+                <li>iOS, Android, web y escritorio</li>
+                <li>Publicada en App Store y Google Play</li>
+                <li>Notificaciones, cámara y pagos</li>
+                <li>Un solo proyecto que mantener</li>
+              </ul>
+            </div>
+            <div class="devices">
+              <div class="device device--phone">
+                <div class="appui">
+                  <div class="appui__head"><strong>Menú</strong><span class="appui__cart" data-app-count-phone>0</span></div>
+                  <div class="appui__list" data-app-menu></div>
+                </div>
+              </div>
+              <div class="device device--desk" aria-hidden="true">
+                <div class="window__bar"><i></i><i></i><i></i><span>Panel de pedidos</span></div>
+                <div class="appui appui--desk">
+                  <div class="appui__head"><strong>Pedido en curso</strong><span class="appui__cart" data-app-count-desk>0</span></div>
+                  <ul class="appui__order" data-app-order><li class="appui__empty">Sin productos todavía</li></ul>
+                  <div class="appui__total"><span>Total</span><b data-app-total>₡0</b></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="about__decoration"></div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section class="work" id="work">
+      <div class="wrap">
+        <header class="work__head">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">Proyectos</p>
+            <h2 class="section-title">Trabajo seleccionado.</h2>
+          </div>
+          <div class="filters" role="tablist" aria-label="Filtrar proyectos" data-reveal></div>
+        </header>
+        <div class="grid" id="projectGrid"></div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track" data-marquee>
+        <span>Websites</span><i></i><span>Apps multiplataforma</span><i></i><span>Facturación electrónica</span><i></i><span>Inventarios</span><i></i><span>Catálogos</span><i></i><span>Punto de venta</span><i></i><span>Portafolios</span><i></i><span>Invitaciones</span><i></i>
       </div>
     </div>
-  </section>
 
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <div class="container">
-      <div class="section-head">
-        <p class="section-label">Contacto</p>
-        <h2 class="section-title">¿Tienes un proyecto<br /><em>en mente?</em></h2>
-        <p class="contact__sub">Cuéntanos de qué se trata. Respondemos en menos de 24 horas.</p>
+    <!-- PROCESS -->
+    <section class="process" id="process">
+      <div class="wrap">
+        <header class="section-head" data-reveal>
+          <p class="eyebrow">Cómo trabajo</p>
+          <h2 class="section-title">De la idea<br /><span class="muted">al lanzamiento.</span></h2>
+        </header>
+        <ol class="steps" data-steps>
+          <li class="step" data-reveal>
+            <span class="step__num">01</span>
+            <h3>Diagnóstico</h3>
+            <p>Conversamos sobre tu negocio y definimos qué tiene que resolver el software. Sales con un alcance y una cotización claros.</p>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num">02</span>
+            <h3>Diseño</h3>
+            <p>Te muestro prototipos navegables antes de escribir código, para que veas y ajustes cómo va a funcionar.</p>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num">03</span>
+            <h3>Desarrollo</h3>
+            <p>Entregas por etapas que puedes probar desde el principio. Sin esperar meses para ver resultados.</p>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num">04</span>
+            <h3>Lanzamiento y soporte</h3>
+            <p>Lo publico, capacito a tu equipo y me quedo a cargo del mantenimiento.</p>
+          </li>
+        </ol>
+
+        <div class="sectors">
+          <p class="sectors__label" data-reveal>Para quién trabajo</p>
+          <ul class="sectors__grid">
+            <li data-reveal><h3>Restaurantes y cafeterías</h3><p>Punto de venta, comandas a cocina y facturación electrónica.</p></li>
+            <li data-reveal><h3>Comercios y tiendas</h3><p>Inventario, catálogo en línea y ventas desde el celular.</p></li>
+            <li data-reveal><h3>Servicios profesionales</h3><p>Citas, expedientes de clientes y cobros.</p></li>
+            <li data-reveal><h3>Emprendimientos</h3><p>De la idea a una primera versión de tu app o plataforma.</p></li>
+            <li data-reveal><h3>Artistas y creativos</h3><p>Un portafolio con tu estilo, comisiones y tienda en línea.</p></li>
+            <li data-reveal><h3>Personas y eventos</h3><p>Tu portafolio profesional o una invitación interactiva para tu fiesta.</p></li>
+          </ul>
+        </div>
       </div>
-      <div class="contact__channels">
-        <a href="https://wa.me/50663331383" target="_blank" rel="noopener" class="channel-card">
-          <div class="channel-card__icon channel-card__icon--wa">
-            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-            </svg>
-          </div>
-          <div class="channel-card__text">
-            <span class="channel-card__label">WhatsApp</span>
-            <span class="channel-card__value">+506 6333 1383</span>
-          </div>
-          <span class="channel-card__arrow">→</span>
-        </a>
+    </section>
 
-        <a href="https://instagram.com/montevo.studio" target="_blank" rel="noopener" class="channel-card">
-          <div class="channel-card__icon channel-card__icon--ig">
-            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-            </svg>
+    <!-- STACK -->
+    <section class="stack" id="stack">
+      <div class="wrap">
+        <header class="section-head stack__head" data-reveal>
+          <div>
+            <p class="eyebrow">Tecnología</p>
+            <h2 class="section-title">Herramientas probadas.<br /><span class="muted">Sistemas que duran.</span></h2>
           </div>
-          <div class="channel-card__text">
-            <span class="channel-card__label">Instagram</span>
-            <span class="channel-card__value">@montevo.studio</span>
-          </div>
-          <span class="channel-card__arrow">→</span>
-        </a>
-
-        <a href="mailto:montevostudio@outlook.com" class="channel-card">
-          <div class="channel-card__icon channel-card__icon--email">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
-              <rect x="2" y="4" width="20" height="16" rx="2"/>
-              <path d="M2 7l10 7 10-7"/>
-            </svg>
-          </div>
-          <div class="channel-card__text">
-            <span class="channel-card__label">Email</span>
-            <span class="channel-card__value">montevostudio@outlook.com</span>
-          </div>
-          <span class="channel-card__arrow">→</span>
-        </a>
+          <p class="stack__intro">Uso el mismo stack que empresas de software de todo el mundo, para que tu sistema sea rápido, seguro y fácil de mantener.</p>
+        </header>
+        <ul class="stack__grid" id="stackGrid"></ul>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FOOTER -->
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="wrap about__inner">
+        <div class="about__text" data-reveal>
+          <p class="eyebrow">Quién está detrás</p>
+          <h2 class="section-title">Hola, soy <span class="muted">Jean Carlo.</span></h2>
+          <p>Soy Jean Carlo Villamonte Murillo, desarrollador de software en Costa Rica. Montevo Studio es mi estudio: cada proyecto lo diseño, lo programo y le doy soporte yo mismo.</p>
+          <p>Vengo del desarrollo backend en sistemas de facturación, QA, soporte y consultoría, y junto todo eso en cada proyecto. Trabajar conmigo significa hablar directo con quien escribe el código de tu sistema. Me explicas cómo funciona tu negocio y yo lo convierto en software, sin intermediarios ni teléfono chocho.</p>
+          <ul class="about__facts">
+            <li><strong>1</strong><span>persona de principio a fin</span></li>
+            <li><strong>&lt; 24 h</strong><span>para responderte</span></li>
+            <li><strong><span data-count="100">100</span> %</strong><span>código hecho a tu medida</span></li>
+          </ul>
+        </div>
+        <figure class="about__quote" data-reveal>
+          <blockquote>“El buen software no se nota: la factura sale, el inventario cuadra y tu cliente te encuentra.”</blockquote>
+          <figcaption>
+            <span class="avatar" aria-hidden="true">JV</span>
+            <span><strong>Jean Carlo Villamonte Murillo</strong><br />Fundador y desarrollador, Montevo Studio</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+      <div class="wrap faq__inner">
+        <header class="section-head" data-reveal>
+          <p class="eyebrow">Preguntas frecuentes</p>
+          <h2 class="section-title">Lo que más<br /><span class="muted">me preguntan.</span></h2>
+        </header>
+        <div class="faq__list" data-faq>
+          <div class="qa" data-reveal>
+            <h3><button aria-expanded="false" aria-controls="qa0" id="qa0-q">¿Trabajas solo con empresas?<span class="qa__icon" aria-hidden="true"></span></button></h3>
+            <div class="qa__a" id="qa0" role="region" aria-labelledby="qa0-q"><div><p>No. También hago portafolios personales, páginas para artistas e invitaciones interactivas para cumpleaños y otros eventos. Si tienes una idea, la conversamos y te digo cómo llevarla a algo que funcione.</p></div></div>
+          </div>
+          <div class="qa" data-reveal>
+            <h3><button aria-expanded="false" aria-controls="qa1" id="qa1-q">¿Qué necesito para empezar a facturar electrónicamente?<span class="qa__icon" aria-hidden="true"></span></button></h3>
+            <div class="qa__a" id="qa1" role="region" aria-labelledby="qa1-q"><div><p>Estar inscrito en Hacienda y tener acceso a ATV. Desde ahí se generan la llave criptográfica y el usuario que usa el sistema para enviar tus comprobantes. Si todavía no los tienes, te guío paso a paso.</p></div></div>
+          </div>
+          <div class="qa" data-reveal>
+            <h3><button aria-expanded="false" aria-controls="qa2" id="qa2-q">¿Sirve para régimen simplificado y para sociedades?<span class="qa__icon" aria-hidden="true"></span></button></h3>
+            <div class="qa__a" id="qa2" role="region" aria-labelledby="qa2-q"><div><p>Sí. El sistema se configura según tu tipo de contribuyente: persona física, régimen simplificado o persona jurídica.</p></div></div>
+          </div>
+          <div class="qa" data-reveal>
+            <h3><button aria-expanded="false" aria-controls="qa3" id="qa3-q">¿Cuánto tarda un proyecto?<span class="qa__icon" aria-hidden="true"></span></button></h3>
+            <div class="qa__a" id="qa3" role="region" aria-labelledby="qa3-q"><div><p>Depende del alcance. Un sitio web suele tomar algunas semanas; un sistema o una app a la medida, algunos meses. En el diagnóstico te doy un calendario concreto.</p></div></div>
+          </div>
+          <div class="qa" data-reveal>
+            <h3><button aria-expanded="false" aria-controls="qa4" id="qa4-q">¿Puedo actualizar mi sitio o mi catálogo yo mismo?<span class="qa__icon" aria-hidden="true"></span></button></h3>
+            <div class="qa__a" id="qa4" role="region" aria-labelledby="qa4-q"><div><p>Si lo necesitas, incluyo un panel de administración para que tú o tu equipo cambien textos, productos y precios sin tocar código.</p></div></div>
+          </div>
+          <div class="qa" data-reveal>
+            <h3><button aria-expanded="false" aria-controls="qa5" id="qa5-q">¿Una app multiplataforma funciona igual que una nativa?<span class="qa__icon" aria-hidden="true"></span></button></h3>
+            <div class="qa__a" id="qa5" role="region" aria-labelledby="qa5-q"><div><p>Para la gran mayoría de negocios, sí. Se publica en App Store y Google Play, usa cámara, notificaciones y pagos, y tienes un solo proyecto que mantener en lugar de dos o tres.</p></div></div>
+          </div>
+          <div class="qa" data-reveal>
+            <h3><button aria-expanded="false" aria-controls="qa6" id="qa6-q">¿Qué pasa después del lanzamiento?<span class="qa__icon" aria-hidden="true"></span></button></h3>
+            <div class="qa__a" id="qa6" role="region" aria-labelledby="qa6-q"><div><p>Ofrezco mantenimiento: actualizaciones, respaldos, cambios pequeños y soporte cuando algo falla.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact" data-nav="dark" data-glow>
+      <div class="wrap">
+        <p class="status" data-reveal><span class="status__dot"></span>Aceptando proyectos nuevos</p>
+        <h2 class="contact__title" data-split>¿Tienes un proyecto en mente?</h2>
+        <p class="contact__sub" data-reveal>Cuéntame de qué se trata. Respondo en menos de 24 horas.</p>
+        <div class="contact__grid">
+          <form class="form" id="contactForm" novalidate data-reveal>
+            <div class="form__row">
+              <div class="field">
+                <label for="f-nombre">Tu nombre</label>
+                <input id="f-nombre" name="nombre" autocomplete="name" required maxlength="120" />
+              </div>
+              <div class="field">
+                <label for="f-contacto">Correo o WhatsApp</label>
+                <input id="f-contacto" name="contacto" autocomplete="email" required maxlength="160" />
+              </div>
+            </div>
+            <fieldset class="field">
+              <legend>¿Qué necesitas?</legend>
+              <div class="chips">
+                <label><input type="radio" name="tipo" value="Website" checked /><span>Website</span></label>
+                <label><input type="radio" name="tipo" value="App" /><span>App</span></label>
+                <label><input type="radio" name="tipo" value="Facturación" /><span>Facturación</span></label>
+                <label><input type="radio" name="tipo" value="Sistema" /><span>Sistema</span></label>
+                <label><input type="radio" name="tipo" value="Portafolio" /><span>Portafolio</span></label>
+                <label><input type="radio" name="tipo" value="Invitación" /><span>Invitación</span></label>
+                <label><input type="radio" name="tipo" value="Otro" /><span>Otro</span></label>
+              </div>
+            </fieldset>
+            <div class="field">
+              <label for="f-mensaje">Cuéntame tu idea</label>
+              <textarea id="f-mensaje" name="mensaje" rows="4" required minlength="10" maxlength="4000" placeholder="Qué quieres lograr, para cuándo y cualquier detalle que ayude."></textarea>
+            </div>
+            <div class="form__hp" aria-hidden="true">
+              <label for="f-sitio">No llenar</label>
+              <input id="f-sitio" name="sitio" tabindex="-1" autocomplete="off" />
+            </div>
+            <div class="form__foot">
+              <button class="btn btn--solid btn--xl form__submit" type="submit" data-magnetic><span>Enviar mensaje</span></button>
+              <p class="form__status" id="formStatus" role="status"></p>
+            </div>
+          </form>
+          <aside class="contact__aside" data-reveal>
+            <p>¿Prefieres algo más rápido?</p>
+            <a href="https://wa.me/50663331383" target="_blank" rel="noopener" class="btn btn--line btn--xl"><span>Escríbeme por WhatsApp</span></a>
+          </aside>
+        </div>
+        <ul class="channels">
+          <li data-reveal><a href="https://wa.me/50663331383" target="_blank" rel="noopener"><span class="channels__label">WhatsApp</span><span class="channels__value">+506 6333 1383</span><span class="channels__arrow" aria-hidden="true">→</span></a></li>
+          <li data-reveal><a href="https://instagram.com/montevo.studio" target="_blank" rel="noopener"><span class="channels__label">Instagram</span><span class="channels__value">@montevo.studio</span><span class="channels__arrow" aria-hidden="true">→</span></a></li>
+          <li data-reveal><a href="mailto:montevostudio@outlook.com"><span class="channels__label">Email</span><span class="channels__value">montevostudio@outlook.com</span><span class="channels__arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
   <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__brand">
-        <span class="footer__name">Montevo Studio</span>
-        <span class="footer__tagline">Strategy · Design · Systems · Growth</span>
-      </div>
-      <p class="footer__copy">© 2025 Montevo Studio. Todos los derechos reservados.</p>
-      <div class="footer__social">
-        <a href="https://instagram.com/montevo.studio" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-          </svg>
-        </a>
-        <a href="https://wa.me/50663331383" target="_blank" rel="noopener" aria-label="WhatsApp">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-          </svg>
-        </a>
-      </div>
+    <div class="wrap footer__inner">
+      <span>© <span id="year">2026</span> Montevo Studio</span>
+      <span>Web · Apps · Facturación · Sistemas</span>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <!-- PROJECT DETAIL -->
+  <div class="case" id="case" role="dialog" aria-modal="true" aria-labelledby="caseTitle" hidden>
+    <div class="case__backdrop"></div>
+    <div class="case__scroller" id="caseScroller">
+      <div class="case__cover" id="caseCover"></div>
+      <div class="case__body" id="caseBody"></div>
+    </div>
+    <button class="case__close" id="caseClose" aria-label="Cerrar proyecto">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
 </body>
 </html>
