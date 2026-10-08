@@ -2,7 +2,8 @@ import type { Project, ProjectType } from '../types';
 import { $, $$, esc, reducedMotion, EASE_OUT } from '../lib/dom';
 import { segmented } from '../lib/segmented';
 
-export const TYPE_LABEL: Record<ProjectType, string> = { client: 'Cliente', product: 'Producto propio', concept: 'Concepto' };
+export const TYPE_LABEL: Record<ProjectType, string> = { negocio: 'Para un negocio', persona: 'Para una persona', producto: 'Producto propio', concepto: 'Concepto' };
+const FILTER_LABEL: Record<ProjectType, string> = { negocio: 'Negocios', persona: 'Personas', producto: 'Productos', concepto: 'Conceptos' };
 
 const MARK = '<svg class="cover__mark" viewBox="0 0 40 32" aria-hidden="true"><path d="M34 1.5v29a1 1 0 0 1-1.6.8L15 16 32.4.7A1 1 0 0 1 34 1.5Z"/><path d="M6 2.2v27.6a1.5 1.5 0 0 0 2.4 1.2l17.2-13.2a2.3 2.3 0 0 0 0-3.6L8.4 1A1.5 1.5 0 0 0 6 2.2Z"/></svg>';
 
@@ -77,11 +78,16 @@ export function initWork(projects: Project[], onLayoutChange: () => void) {
     onLayoutChange();
   }
 
-  // Filters only make sense once there are both client and concept projects.
+  // One filter per project type in use; hidden when there is only one.
   const filters = $('.work .filters');
-  const types = new Set(projects.map(p => p.type));
-  if (filters && types.size > 1) segmented(filters, btn => applyFilter(btn.dataset.filter ?? 'all'));
-  else filters?.remove();
+  const order: ProjectType[] = ['negocio', 'persona', 'producto', 'concepto'];
+  const types = order.filter(t => projects.some(p => p.type === t));
+  if (filters && types.length > 1) {
+    filters.innerHTML = `<span class="filters__pill" aria-hidden="true"></span>
+      <button role="tab" aria-selected="true" data-filter="all">Todos</button>
+      ${types.map(t => `<button role="tab" aria-selected="false" data-filter="${t}">${FILTER_LABEL[t]}</button>`).join('')}`;
+    segmented(filters, btn => applyFilter(btn.dataset.filter ?? 'all'));
+  } else filters?.remove();
 
   return grid;
 }

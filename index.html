@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Montevo Studio — Websites, apps y sistemas a la medida</title>
-  <meta name="description" content="Montevo Studio es un estudio de software en Costa Rica: websites, apps multiplataforma, facturación electrónica para Hacienda, inventarios y catálogos." />
+  <meta name="description" content="Montevo Studio es el estudio de software de Jean Carlo Villamonte Murillo en Costa Rica: websites, apps, sistemas de facturación e inventario, portafolios e invitaciones interactivas para negocios y personas." />
   <meta name="theme-color" content="#F2EBE2" />
   <meta property="og:title" content="Montevo Studio" />
-  <meta property="og:description" content="Websites, apps multiplataforma y sistemas de facturación, inventario y catálogos." />
+  <meta property="og:description" content="Le doy vida a tu idea: websites, apps, sistemas, portafolios e invitaciones interactivas." />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,6 +20,7 @@
 
   <!-- NAV -->
   <header class="nav" id="nav">
+    <span class="nav__progress" aria-hidden="true"></span>
     <div class="nav__inner">
       <a href="#top" class="nav__brand" aria-label="Montevo Studio, inicio">
         <svg class="mark" viewBox="0 0 40 32" aria-hidden="true">
@@ -47,9 +48,9 @@
     <section class="hero" id="top">
       <div class="hero__inner">
         <div class="hero__copy" data-hero-copy>
-          <p class="eyebrow" data-reveal style="--d:0ms">Estudio de software · Costa Rica</p>
-          <h1 class="hero__title" data-split>Software que hace crecer tu&nbsp;negocio.</h1>
-          <p class="hero__sub" data-reveal style="--d:450ms">Websites, apps multiplataforma y sistemas de facturación electrónica, inventario y catálogos. Diseñados y programados a la medida.</p>
+          <p class="eyebrow" data-reveal style="--d:0ms">Jean Carlo Villamonte · Desarrollador de software · Costa Rica</p>
+          <h1 class="hero__title" data-split>Le doy vida a tu <span class="rotator" data-nosplit data-rotate="idea.,negocio.,marca.,evento.,proyecto."><span class="is-on">idea.</span></span></h1>
+          <p class="hero__sub" data-reveal style="--d:450ms">Websites, apps y sistemas para negocios, artistas y personas con una idea. Desde la facturación de tu empresa hasta tu portafolio o la invitación de tu fiesta, diseñado y programado a tu medida.</p>
           <div class="hero__actions" data-reveal style="--d:560ms">
             <a href="#work" class="btn btn--solid" data-magnetic><span>Ver proyectos</span></a>
             <a href="#contact" class="btn btn--line" data-magnetic><span>Cotizar proyecto</span></a>
@@ -58,6 +59,7 @@
 
         <div class="hero__stage" data-hero-stage>
           <div class="mascot" id="mascot" data-reveal style="--d:200ms">
+            <p class="bubble" id="bubble" aria-live="polite"></p>
             <div class="mascot__body">
               <img src="./src/assets/mascot.webp" alt="La mascota de Montevo Studio sostiene una pluma y un gráfico de crecimiento" width="1412" height="1114" fetchpriority="high" />
               <svg class="mascot__eyes" viewBox="0 0 1412 1114" aria-hidden="true">
@@ -86,16 +88,16 @@
     <!-- STATEMENT (scroll-driven) -->
     <section class="statement" aria-label="Quiénes somos">
       <div class="statement__sticky">
-        <p class="statement__text" data-scrub>Diseñamos y programamos el software que tu negocio usa todos los días. Desde el sitio que te presenta hasta el sistema que factura ante Hacienda. Un solo equipo, de la idea al lanzamiento.</p>
+        <p class="statement__text" data-scrub>Diseño y programo cosas que la gente usa de verdad: el sistema que factura en tu negocio, el portafolio que muestra tu trabajo, la invitación que todos comentan. Una sola persona a cargo, de la idea al lanzamiento.</p>
       </div>
     </section>
 
     <!-- SERVICES -->
-    <section class="services" id="services" data-nav="dark">
+    <section class="services" id="services" data-nav="dark" data-glow>
       <div class="wrap">
         <header class="section-head" data-reveal>
-          <p class="eyebrow">Lo que construimos</p>
-          <h2 class="section-title">De la web<br /><span class="muted">a la caja registradora.</span></h2>
+          <p class="eyebrow">Lo que construyo</p>
+          <h2 class="section-title">Para tu negocio.<br /><span class="muted">Y para ti.</span></h2>
         </header>
 
         <div class="pillars">
@@ -112,6 +114,9 @@
               </svg>
               <svg viewBox="0 0 120 120" class="pillar-art" data-art="3">
                 <rect x="18" y="64" width="38" height="38" rx="4" pathLength="1"/><rect x="64" y="64" width="38" height="38" rx="4" pathLength="1"/><rect x="41" y="18" width="38" height="38" rx="4" pathLength="1"/><path d="M30 76h14M76 76h14M53 30h14" pathLength="1"/>
+              </svg>
+              <svg viewBox="0 0 120 120" class="pillar-art" data-art="4">
+                <rect x="22" y="14" width="76" height="92" rx="8" pathLength="1"/><circle cx="60" cy="46" r="14" pathLength="1"/><path d="M38 84c4-12 13-18 22-18s18 6 22 18" pathLength="1"/><path d="M96 10l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" pathLength="1"/>
               </svg>
             </div>
           </div>
@@ -136,6 +141,11 @@
               <h3 class="pillar__name">Sistemas a la medida</h3>
               <p class="pillar__desc">Inventarios, catálogos, puntos de venta y reportes: las herramientas internas que ordenan tu operación.</p>
               <ul class="pillar__list"><li>Control de inventario</li><li>Catálogos digitales</li><li>Punto de venta (POS)</li><li>Dashboards y reportes</li></ul>
+            </article>
+            <article class="pillar" data-pillar="4">
+              <h3 class="pillar__name">Proyectos personales</h3>
+              <p class="pillar__desc">Para personas, artistas y momentos especiales. Una página que muestre quién eres, o una invitación que la gente quiera abrir.</p>
+              <ul class="pillar__list"><li>Portafolios personales</li><li>Páginas para artistas y bandas</li><li>Invitaciones interactivas</li><li>Confirmación de asistencia</li></ul>
             </article>
           </div>
         </div>
@@ -263,22 +273,24 @@
             <p class="eyebrow">Proyectos</p>
             <h2 class="section-title">Trabajo seleccionado.</h2>
           </div>
-          <div class="filters" role="tablist" aria-label="Filtrar proyectos" data-reveal>
-            <span class="filters__pill" aria-hidden="true"></span>
-            <button role="tab" aria-selected="true" data-filter="all">Todos</button>
-            <button role="tab" aria-selected="false" data-filter="client">Clientes</button>
-            <button role="tab" aria-selected="false" data-filter="product">Productos</button>
-          </div>
+          <div class="filters" role="tablist" aria-label="Filtrar proyectos" data-reveal></div>
         </header>
         <div class="grid" id="projectGrid"></div>
       </div>
     </section>
 
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track" data-marquee>
+        <span>Websites</span><i></i><span>Apps multiplataforma</span><i></i><span>Facturación electrónica</span><i></i><span>Inventarios</span><i></i><span>Catálogos</span><i></i><span>Punto de venta</span><i></i><span>Portafolios</span><i></i><span>Invitaciones</span><i></i>
+      </div>
+    </div>
+
     <!-- PROCESS -->
     <section class="process" id="process">
       <div class="wrap">
         <header class="section-head" data-reveal>
-          <p class="eyebrow">Cómo trabajamos</p>
+          <p class="eyebrow">Cómo trabajo</p>
           <h2 class="section-title">De la idea<br /><span class="muted">al lanzamiento.</span></h2>
         </header>
         <ol class="steps" data-steps>
@@ -290,7 +302,7 @@
           <li class="step" data-reveal>
             <span class="step__num">02</span>
             <h3>Diseño</h3>
-            <p>Prototipos navegables antes de escribir código, para que veas y ajustes cómo va a funcionar.</p>
+            <p>Te muestro prototipos navegables antes de escribir código, para que veas y ajustes cómo va a funcionar.</p>
           </li>
           <li class="step" data-reveal>
             <span class="step__num">03</span>
@@ -300,17 +312,19 @@
           <li class="step" data-reveal>
             <span class="step__num">04</span>
             <h3>Lanzamiento y soporte</h3>
-            <p>Publicamos, capacitamos a tu equipo y nos quedamos para el mantenimiento.</p>
+            <p>Lo publico, capacito a tu equipo y me quedo a cargo del mantenimiento.</p>
           </li>
         </ol>
 
         <div class="sectors">
-          <p class="sectors__label" data-reveal>Para quién trabajamos</p>
+          <p class="sectors__label" data-reveal>Para quién trabajo</p>
           <ul class="sectors__grid">
             <li data-reveal><h3>Restaurantes y cafeterías</h3><p>Punto de venta, comandas a cocina y facturación electrónica.</p></li>
             <li data-reveal><h3>Comercios y tiendas</h3><p>Inventario, catálogo en línea y ventas desde el celular.</p></li>
             <li data-reveal><h3>Servicios profesionales</h3><p>Citas, expedientes de clientes y cobros.</p></li>
             <li data-reveal><h3>Emprendimientos</h3><p>De la idea a una primera versión de tu app o plataforma.</p></li>
+            <li data-reveal><h3>Artistas y creativos</h3><p>Un portafolio con tu estilo, comisiones y tienda en línea.</p></li>
+            <li data-reveal><h3>Personas y eventos</h3><p>Tu portafolio profesional o una invitación interactiva para tu fiesta.</p></li>
           </ul>
         </div>
       </div>
@@ -324,7 +338,7 @@
             <p class="eyebrow">Tecnología</p>
             <h2 class="section-title">Herramientas probadas.<br /><span class="muted">Sistemas que duran.</span></h2>
           </div>
-          <p class="stack__intro">Trabajamos con el mismo stack que usan empresas de software de todo el mundo, para que tu sistema sea rápido, seguro y fácil de mantener.</p>
+          <p class="stack__intro">Uso el mismo stack que empresas de software de todo el mundo, para que tu sistema sea rápido, seguro y fácil de mantener.</p>
         </header>
         <ul class="stack__grid" id="stackGrid"></ul>
       </div>
@@ -334,16 +348,21 @@
     <section class="about" id="about">
       <div class="wrap about__inner">
         <div class="about__text" data-reveal>
-          <p class="eyebrow">El estudio</p>
-          <h2 class="section-title">Un estudio que diseña <span class="muted">y programa.</span></h2>
-          <p>Montevo Studio nació de una convicción: los negocios pequeños y medianos merecen software de la misma calidad que usan las grandes empresas, sin la complejidad ni los precios inflados.</p>
-          <p>Primero entendemos cómo opera tu negocio. Después diseñamos y escribimos el código que lo hace funcionar mejor, y nos quedamos para darle soporte.</p>
+          <p class="eyebrow">Quién está detrás</p>
+          <h2 class="section-title">Hola, soy <span class="muted">Jean Carlo.</span></h2>
+          <p>Soy Jean Carlo Villamonte Murillo, desarrollador de software en Costa Rica. Montevo Studio es mi estudio: cada proyecto lo diseño, lo programo y le doy soporte yo mismo.</p>
+          <p>Vengo del desarrollo backend en sistemas de facturación, QA, soporte y consultoría, y junto todo eso en cada proyecto. Trabajar conmigo significa hablar directo con quien escribe el código de tu sistema. Me explicas cómo funciona tu negocio y yo lo convierto en software, sin intermediarios ni teléfono chocho.</p>
+          <ul class="about__facts">
+            <li><strong>1</strong><span>persona de principio a fin</span></li>
+            <li><strong>&lt; 24 h</strong><span>para responderte</span></li>
+            <li><strong><span data-count="100">100</span> %</strong><span>código hecho a tu medida</span></li>
+          </ul>
         </div>
         <figure class="about__quote" data-reveal>
           <blockquote>“El buen software no se nota: la factura sale, el inventario cuadra y tu cliente te encuentra.”</blockquote>
           <figcaption>
             <span class="avatar" aria-hidden="true">JV</span>
-            <span><strong>Jean Carlo Villamonte</strong><br />Founder, Montevo Studio</span>
+            <span><strong>Jean Carlo Villamonte Murillo</strong><br />Fundador y desarrollador, Montevo Studio</span>
           </figcaption>
         </figure>
       </div>
@@ -354,12 +373,16 @@
       <div class="wrap faq__inner">
         <header class="section-head" data-reveal>
           <p class="eyebrow">Preguntas frecuentes</p>
-          <h2 class="section-title">Lo que más<br /><span class="muted">nos preguntan.</span></h2>
+          <h2 class="section-title">Lo que más<br /><span class="muted">me preguntan.</span></h2>
         </header>
         <div class="faq__list" data-faq>
           <div class="qa" data-reveal>
+            <h3><button aria-expanded="false" aria-controls="qa0" id="qa0-q">¿Trabajas solo con empresas?<span class="qa__icon" aria-hidden="true"></span></button></h3>
+            <div class="qa__a" id="qa0" role="region" aria-labelledby="qa0-q"><div><p>No. También hago portafolios personales, páginas para artistas e invitaciones interactivas para cumpleaños y otros eventos. Si tienes una idea, la conversamos y te digo cómo llevarla a algo que funcione.</p></div></div>
+          </div>
+          <div class="qa" data-reveal>
             <h3><button aria-expanded="false" aria-controls="qa1" id="qa1-q">¿Qué necesito para empezar a facturar electrónicamente?<span class="qa__icon" aria-hidden="true"></span></button></h3>
-            <div class="qa__a" id="qa1" role="region" aria-labelledby="qa1-q"><div><p>Estar inscrito en Hacienda y tener acceso a ATV. Desde ahí se generan la llave criptográfica y el usuario que usa el sistema para enviar tus comprobantes. Si todavía no los tienes, te guiamos paso a paso.</p></div></div>
+            <div class="qa__a" id="qa1" role="region" aria-labelledby="qa1-q"><div><p>Estar inscrito en Hacienda y tener acceso a ATV. Desde ahí se generan la llave criptográfica y el usuario que usa el sistema para enviar tus comprobantes. Si todavía no los tienes, te guío paso a paso.</p></div></div>
           </div>
           <div class="qa" data-reveal>
             <h3><button aria-expanded="false" aria-controls="qa2" id="qa2-q">¿Sirve para régimen simplificado y para sociedades?<span class="qa__icon" aria-hidden="true"></span></button></h3>
@@ -367,11 +390,11 @@
           </div>
           <div class="qa" data-reveal>
             <h3><button aria-expanded="false" aria-controls="qa3" id="qa3-q">¿Cuánto tarda un proyecto?<span class="qa__icon" aria-hidden="true"></span></button></h3>
-            <div class="qa__a" id="qa3" role="region" aria-labelledby="qa3-q"><div><p>Depende del alcance. Un sitio web suele tomar algunas semanas; un sistema o una app a la medida, algunos meses. En el diagnóstico te damos un calendario concreto.</p></div></div>
+            <div class="qa__a" id="qa3" role="region" aria-labelledby="qa3-q"><div><p>Depende del alcance. Un sitio web suele tomar algunas semanas; un sistema o una app a la medida, algunos meses. En el diagnóstico te doy un calendario concreto.</p></div></div>
           </div>
           <div class="qa" data-reveal>
             <h3><button aria-expanded="false" aria-controls="qa4" id="qa4-q">¿Puedo actualizar mi sitio o mi catálogo yo mismo?<span class="qa__icon" aria-hidden="true"></span></button></h3>
-            <div class="qa__a" id="qa4" role="region" aria-labelledby="qa4-q"><div><p>Si lo necesitas, incluimos un panel de administración para que tú o tu equipo cambien textos, productos y precios sin tocar código.</p></div></div>
+            <div class="qa__a" id="qa4" role="region" aria-labelledby="qa4-q"><div><p>Si lo necesitas, incluyo un panel de administración para que tú o tu equipo cambien textos, productos y precios sin tocar código.</p></div></div>
           </div>
           <div class="qa" data-reveal>
             <h3><button aria-expanded="false" aria-controls="qa5" id="qa5-q">¿Una app multiplataforma funciona igual que una nativa?<span class="qa__icon" aria-hidden="true"></span></button></h3>
@@ -379,20 +402,20 @@
           </div>
           <div class="qa" data-reveal>
             <h3><button aria-expanded="false" aria-controls="qa6" id="qa6-q">¿Qué pasa después del lanzamiento?<span class="qa__icon" aria-hidden="true"></span></button></h3>
-            <div class="qa__a" id="qa6" role="region" aria-labelledby="qa6-q"><div><p>Ofrecemos mantenimiento: actualizaciones, respaldos, cambios pequeños y soporte cuando algo falla.</p></div></div>
+            <div class="qa__a" id="qa6" role="region" aria-labelledby="qa6-q"><div><p>Ofrezco mantenimiento: actualizaciones, respaldos, cambios pequeños y soporte cuando algo falla.</p></div></div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section class="contact" id="contact" data-nav="dark">
+    <section class="contact" id="contact" data-nav="dark" data-glow>
       <div class="wrap">
-        <p class="eyebrow" data-reveal>Contacto</p>
+        <p class="status" data-reveal><span class="status__dot"></span>Aceptando proyectos nuevos</p>
         <h2 class="contact__title" data-split>¿Tienes un proyecto en mente?</h2>
-        <p class="contact__sub" data-reveal>Cuéntanos de qué se trata. Respondemos en menos de 24 horas.</p>
+        <p class="contact__sub" data-reveal>Cuéntame de qué se trata. Respondo en menos de 24 horas.</p>
         <div data-reveal>
-          <a href="https://wa.me/50663331383" target="_blank" rel="noopener" class="btn btn--solid btn--xl" data-magnetic><span>Escríbenos por WhatsApp</span></a>
+          <a href="https://wa.me/50663331383" target="_blank" rel="noopener" class="btn btn--solid btn--xl" data-magnetic><span>Escríbeme por WhatsApp</span></a>
         </div>
         <ul class="channels">
           <li data-reveal><a href="https://wa.me/50663331383" target="_blank" rel="noopener"><span class="channels__label">WhatsApp</span><span class="channels__value">+506 6333 1383</span><span class="channels__arrow" aria-hidden="true">→</span></a></li>

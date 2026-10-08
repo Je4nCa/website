@@ -12,7 +12,7 @@ import {
 
 export interface Tool {
   icon: { title: string; path: string; hex: string };
-  /** Para qué la usamos, en pocas palabras. */
+  /** Para qué la uso, en pocas palabras. */
   role: string;
 }
 

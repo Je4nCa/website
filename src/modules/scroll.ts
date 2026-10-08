@@ -18,6 +18,8 @@ export function initScroll(scrubWords: HTMLElement[]) {
   const heroStage = $('[data-hero-stage]');
   const statement = $('.statement');
   const darkSections = $$('[data-nav="dark"]');
+  const progress = $('.nav__progress');
+  let maxScroll = 1;
   const tracked = navLinks.map(a => $(a.getAttribute('href') ?? ''));
 
   let vh = innerHeight;
@@ -30,6 +32,7 @@ export function initScroll(scrubWords: HTMLElement[]) {
 
   function measure() {
     vh = innerHeight;
+    maxScroll = Math.max(1, document.documentElement.scrollHeight - vh);
     dark = darkSections.map(docBox);
     trackedBoxes = tracked.map(el => (el ? docBox(el) : null));
     statementBox = statement && docBox(statement);
@@ -53,6 +56,7 @@ export function initScroll(scrubWords: HTMLElement[]) {
       a.classList.toggle('is-current', !!b && mid >= b.top && mid < b.bottom);
     });
     lastY = y;
+    if (progress) progress.style.transform = `scaleX(${clamp(y / maxScroll, 0, 1)})`;
 
     if (reducedMotion) return;
 

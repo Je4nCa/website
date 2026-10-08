@@ -1,8 +1,8 @@
 /** Las líneas de trabajo del estudio. Se muestran como etiquetas en cada proyecto. */
-export type Service = 'Web' | 'Apps' | 'Facturación' | 'Sistemas' | 'Diseño';
+export type Service = 'Web' | 'Apps' | 'Facturación' | 'Sistemas' | 'Diseño' | 'Portafolio' | 'Invitación';
 
-/** `client` = hecho para un cliente · `product` = producto propio de Montevo · `concept` = proyecto conceptual. */
-export type ProjectType = 'client' | 'product' | 'concept';
+/** Para quién es: `negocio`, `persona` (artistas, profesionales, eventos), `producto` propio de Montevo o `concepto`. */
+export type ProjectType = 'negocio' | 'persona' | 'producto' | 'concepto';
 
 export interface Project {
   /** Único, en minúsculas y con guiones. Va en la URL: #/proyecto/<slug> */

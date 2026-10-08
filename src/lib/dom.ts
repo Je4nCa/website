@@ -19,7 +19,11 @@ export function splitWords(el: Element, wrap: (word: string, index: number) => N
   let i = 0;
   const walk = (node: Node) => {
     [...node.childNodes].forEach(child => {
-      if (child.nodeType === Node.ELEMENT_NODE) return walk(child);
+      if (child.nodeType === Node.ELEMENT_NODE) {
+        // [data-nosplit] elements animate on their own (e.g. the hero's rotating word)
+        if ((child as Element).hasAttribute('data-nosplit')) return;
+        return walk(child);
+      }
       if (child.nodeType !== Node.TEXT_NODE) return;
       const frag = document.createDocumentFragment();
       (child.textContent ?? '').split(/( +)/).forEach(part => {

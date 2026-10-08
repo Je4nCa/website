@@ -88,12 +88,37 @@ export function initMascot() {
   }, 2400 + Math.random() * 3600);
   scheduleBlink();
 
+  // Speech bubble: short lines while the hero is on screen, a reaction when clicked.
+  const bubble = $('#bubble');
+  const lines = ['¡Hola! Bienvenido a Montevo.', '¿Tienes una idea? Cuéntamela.', '¿Todavía facturas a mano?', 'Psst… abajo hay ejemplos que puedes probar.', 'Hecho en Costa Rica.', 'Tócame. No muerdo.'];
+  const reactions = ['¡Jaja, cosquillas!', '¡Otra vez!', 'Ok, ok. ¿Hablamos de tu proyecto?'];
+  let line = 0, reaction = 0, bubbleTimer = 0;
+  const say = (text: string, hold = 3400) => {
+    if (!bubble) return;
+    clearTimeout(bubbleTimer);
+    bubble.classList.remove('is-on');
+    bubbleTimer = window.setTimeout(() => {
+      bubble.textContent = text;
+      bubble.classList.add('is-on');
+      bubbleTimer = window.setTimeout(() => {
+        bubble.classList.remove('is-on');
+        bubbleTimer = window.setTimeout(next, 1400);
+      }, hold);
+    }, bubble.classList.contains('is-on') ? 250 : 0);
+  };
+  const next = () => {
+    if (!visible || document.hidden) { bubbleTimer = window.setTimeout(next, 1500); return; }
+    say(lines[line++ % lines.length]);
+  };
+  bubbleTimer = window.setTimeout(next, 1800);
+
   new IntersectionObserver(([e]) => {
     visible = e.isIntersecting;
     if (visible && !raf) raf = requestAnimationFrame(loop);
   }).observe(mascot);
 
   mascot.addEventListener('click', () => {
+    say(reactions[reaction++ % reactions.length], 2200);
     if (reducedMotion) return blink();
     mascot.classList.remove('is-boing');
     void mascot.offsetWidth;
