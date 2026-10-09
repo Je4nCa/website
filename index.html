@@ -41,8 +41,19 @@
         "@id": "https://montevostudio.com/#studio",
         "name": "Montevo Studio",
         "url": "https://montevostudio.com/",
-        "logo": "https://montevostudio.com/icon-512.png",
-        "image": "https://montevostudio.com/og.png",
+        "logo": {
+          "@type": "ImageObject",
+          "@id": "https://montevostudio.com/#logo",
+          "url": "https://montevostudio.com/icon-512.png",
+          "contentUrl": "https://montevostudio.com/icon-512.png",
+          "width": 512,
+          "height": 512,
+          "caption": "Montevo Studio"
+        },
+        "image": [
+          { "@id": "https://montevostudio.com/#logo" },
+          "https://montevostudio.com/og.png"
+        ],
         "description": "Estudio de software en Costa Rica: websites, apps, sistemas de facturación e inventario, portafolios e invitaciones interactivas para negocios y personas.",
         "email": "montevostudio@outlook.com",
         "telephone": "+506 6333 1383",
