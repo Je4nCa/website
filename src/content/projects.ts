@@ -1,3 +1,6 @@
+/**
+ * Project case studies shown in the Work section and the case-study overlay.
+ */
 import type { Project } from '../types';
 
 /* =============================================================

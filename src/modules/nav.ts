@@ -1,3 +1,6 @@
+/**
+ * Top navigation: mobile menu open/close state and accessible labels.
+ */
 import { $, $$, lockScroll } from '../lib/dom';
 
 export const nav = $('#nav')!;

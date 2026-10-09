@@ -1,3 +1,7 @@
+/**
+ * Entry point: wires up every interactive module once the DOM is ready.
+ * Each module is self-contained and respects prefers-reduced-motion.
+ */
 import './styles.css';
 import { projects } from './content/projects';
 import { $ } from './lib/dom';

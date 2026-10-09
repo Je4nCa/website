@@ -1,3 +1,6 @@
+/**
+ * Technology stack shown on the site (icons from simple-icons).
+ */
 import {
   siReact, siTypescript, siFirebase, siSupabase, siPostgresql,
   siResend, siCloudflare, siTailwindcss, siHtml5, siVite,

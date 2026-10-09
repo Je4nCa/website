@@ -1,3 +1,7 @@
+/**
+ * Tiny DOM toolkit: query helpers, clamp, motion/pointer media queries, easing, HTML escaping,
+ * word splitting for text animations and scroll locking.
+ */
 export const $ = <T extends Element = HTMLElement>(sel: string, root: ParentNode = document) =>
   root.querySelector<T>(sel);
 
