@@ -845,6 +845,9 @@ html.is-locked, html.is-locked body { overflow: hidden; }
 .case__visit { margin-top: 28px; }
 .case__gallery { grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); align-items: start; }
 .case__gallery img { grid-column: 1 / -1; box-shadow: 0 1px 2px rgba(38,28,21,.05), 0 30px 80px -40px rgba(38,28,21,.35); }
+/* Teléfonos seguidos se acomodan lado a lado; uno solo queda centrado. */
+.case__gallery img.is-portrait:has(+ img.is-portrait),
+.case__gallery img.is-portrait + img.is-portrait { grid-column: auto; }
 .case__gallery img.is-portrait {
   justify-self: center;
   width: 100%;
