@@ -21,13 +21,13 @@ export const projects: Project[] = [
   {
     slug: 'ranger-swat',
     title: 'Ranger SWAT',
-    client: 'Montevo Studio',
+    client: 'Ranger SWAT',
     year: 2026,
-    type: 'producto',
+    type: 'negocio',
     services: ['Facturación', 'Apps'],
-    summary: 'Facturación electrónica en el celular o la computadora: tiquete o factura con un toque, siempre al día con Hacienda.',
+    summary: 'Sistema de facturación electrónica a la medida para Ranger SWAT, en el celular o la computadora y siempre al día con Hacienda.',
     description: [
-      'Una app de facturación pensada para vender rápido. El comercio arma el carrito, cobra en efectivo, tarjeta, SINPE Móvil o transferencia, y el comprobante sale listo para Hacienda, para imprimir o enviar por correo.',
+      'Un sistema de facturación hecho a la medida para Ranger SWAT, pensado para vender rápido. Se arma el carrito, cobra en efectivo, tarjeta, SINPE Móvil o transferencia, y el comprobante sale listo para Hacienda, para imprimir o enviar por correo.',
       'Emite comprobantes en la versión 4.4 con códigos CABYS tomados del catálogo oficial. Además lleva productos, clientes, cuentas por cobrar y por pagar, cotizaciones y reportes que se descargan en Excel. Tiene modo claro y oscuro, y se instala como app en cualquier dispositivo, sin pasar por tiendas.',
     ],
     deliverables: ['Comprobantes electrónicos v4.4', 'Catálogo CABYS integrado', 'Cuentas por cobrar y por pagar', 'Reportes exportables a Excel', 'App instalable (PWA)'],
