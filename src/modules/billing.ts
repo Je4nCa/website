@@ -6,8 +6,7 @@ import { segmented } from '../lib/segmented';
  * (desktop + phone screenshots), rotating on its own until someone picks one.
  * Its CTA also preselects "Facturación" in the contact form.
  */
-export function initBilling() {
-  const section = $('#montevo-one');
+export function initBilling(section: HTMLElement | null = $('#montevo-one')) {
   const tabs = $('.billing__tabs', section ?? document);
   if (!section || !tabs) return;
 

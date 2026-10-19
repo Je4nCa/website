@@ -41,7 +41,7 @@ export const projects: Project[] = [
       'projects/ranger-swat/reportes.webp',
     ],
     url: 'https://ranger-swat.app',
-    featured: true,
+    one: true,
   },
   {
     slug: 'repuestos-oconitrillo',
@@ -65,6 +65,7 @@ export const projects: Project[] = [
       'projects/repuestos-oconitrillo/movil-articulos.webp',
       'projects/repuestos-oconitrillo/reportes.webp',
     ],
+    one: true,
   },
   {
     slug: 'oconitrillo-usados',
@@ -88,6 +89,7 @@ export const projects: Project[] = [
       'projects/oconitrillo-usados/movil-emitido.webp',
       'projects/oconitrillo-usados/reportes.webp',
     ],
+    one: true,
   },
   {
     slug: 'd-rabbit',

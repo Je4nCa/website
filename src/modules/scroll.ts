@@ -20,7 +20,10 @@ export function initScroll(scrubWords: HTMLElement[]) {
   const darkSections = $$('[data-nav="dark"]');
   const progress = $('.nav__progress');
   let maxScroll = 1;
-  const tracked = navLinks.map(a => $(a.getAttribute('href') ?? ''));
+  const tracked = navLinks.map(a => {
+    const href = a.getAttribute('href') ?? '';
+    return href.startsWith('#') && href.length > 1 ? $(href) : null;
+  });
 
   let vh = innerHeight;
   let dark: Box[] = [];

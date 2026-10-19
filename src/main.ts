@@ -24,7 +24,6 @@ import { initGlow } from './modules/glow';
 import { initTilt } from './modules/tilt';
 import { initCounters } from './modules/count';
 import { initContact } from './modules/contact';
-import { initBilling } from './modules/billing';
 
 if (import.meta.env.DEV) {
   const seen = new Set<string>();
@@ -41,7 +40,8 @@ initSplitHeadings();
 $('.hero__title')?.style.setProperty('--d', '80ms');
 const scrubWords = splitScrub($('[data-scrub]'));
 
-const grid = initWork(projects, () => scroll.remeasure());
+// Los sistemas de Montevo One se presentan en /one/; el inicio muestra el resto.
+const grid = initWork(projects.filter(p => !p.one), () => scroll.remeasure());
 initStack(stack);
 initReveal();
 initNav();
@@ -50,7 +50,6 @@ initServices();
 initMascot();
 initMagnetic();
 initDemos();
-initBilling();
 initFaq();
 initRotator();
 initMarquee();
