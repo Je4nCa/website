@@ -24,6 +24,7 @@ import { initGlow } from './modules/glow';
 import { initTilt } from './modules/tilt';
 import { initCounters } from './modules/count';
 import { initContact } from './modules/contact';
+import { initBilling } from './modules/billing';
 
 if (import.meta.env.DEV) {
   const seen = new Set<string>();
@@ -49,6 +50,7 @@ initServices();
 initMascot();
 initMagnetic();
 initDemos();
+initBilling();
 initFaq();
 initRotator();
 initMarquee();
