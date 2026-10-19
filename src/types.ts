@@ -29,6 +29,8 @@ export interface Project {
   url?: string;
   /** true = tarjeta a todo el ancho. */
   featured?: boolean;
+  /** Partes del proyecto con su propio texto y galería (por ejemplo, dos sistemas de un mismo cliente). */
+  parts?: { title: string; text: string[]; gallery: string[] }[];
   /** Sistema hecho con Montevo One: se muestra en /one/ y no en la cuadrícula del inicio. */
   one?: boolean;
 }

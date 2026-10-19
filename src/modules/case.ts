@@ -56,6 +56,14 @@ export function initCase(projects: Project[], grid: HTMLElement) {
         </div>
       </div>
       ${p.gallery?.length ? `<div class="case__gallery">${p.gallery.map(src => `<img src="${esc(src)}" alt="Captura de ${esc(p.title)}" loading="lazy" decoding="async" />`).join('')}</div>` : ''}
+      ${(p.parts ?? []).map(part => `
+        <section class="case__part">
+          <div class="case__story">
+            <h2>${esc(part.title)}</h2>
+            <div>${part.text.map(t => `<p>${esc(t)}</p>`).join('')}</div>
+          </div>
+          <div class="case__gallery">${part.gallery.map(src => `<img src="${esc(src)}" alt="Captura de ${esc(p.title)}, ${esc(part.title.toLowerCase())}" loading="lazy" decoding="async" />`).join('')}</div>
+        </section>`).join('')}
       ${next !== p ? `<a class="case__next" href="#/proyecto/${esc(next.slug)}" data-next="${esc(next.slug)}"><small>Siguiente proyecto</small><strong>${esc(next.title)} →</strong></a>` : ''}`;
   }
 

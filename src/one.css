@@ -209,3 +209,6 @@ body.one { background: var(--paper); }
   .mods__item--hero { grid-column: auto; grid-row: auto; }
   .ohero__actions .btn { width: 100%; }
 }
+.real__grid--two { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 560px) { .real__grid--two { grid-template-columns: 1fr; } }
+.billing__tabs button { white-space: nowrap; }

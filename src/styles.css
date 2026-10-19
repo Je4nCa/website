@@ -1115,3 +1115,4 @@ html.is-locked, html.is-locked body { overflow: hidden; }
 .teaser__phone { position: absolute; right: 0; bottom: 0; width: 26%; height: auto; border-radius: 22px; border: 6px solid #120c08; box-shadow: 0 30px 70px -24px rgba(0, 0, 0, .8); }
 @media (max-width: 900px) { .teaser { grid-template-columns: 1fr; } }
 .qa__a a { color: var(--copper); text-decoration: underline; text-underline-offset: 3px; }
+.case__part .case__story h2 { color: var(--copper); }
