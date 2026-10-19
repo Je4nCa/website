@@ -82,7 +82,7 @@
         <div class="ohero__copy">
           <p class="badge" data-reveal style="--d:0ms"><span class="badge__dot"></span>Facturación electrónica · Costa Rica</p>
           <h1 class="ohero__title" data-split>Un sistema. <span class="ohero__accent">Todo tu negocio.</span></h1>
-          <p class="ohero__sub" data-reveal style="--d:420ms">Montevo One reúne la facturación electrónica con tu inventario, tus clientes, tu caja y tus citas. Rápido, fácil de usar y hecho a la medida de tu negocio, con tu marca.</p>
+          <p class="ohero__sub" data-reveal style="--d:420ms">Montevo One reúne la facturación electrónica con tu inventario, tus clientes, tu caja y tus citas. Rápido, fácil de usar, con usuarios ilimitados y hecho a la medida de tu negocio, con tu marca.</p>
           <div class="ohero__actions" data-reveal style="--d:520ms">
             <a href="https://wa.me/50663331383?text=Hola%20Jean%20Carlo%2C%20quiero%20informaci%C3%B3n%20sobre%20Montevo%20One" target="_blank" rel="noopener" class="btn btn--paper btn--xl" data-magnetic><span>Quiero mi Montevo One</span></a>
             <a href="#demo" class="btn btn--ghost btn--xl" data-magnetic><span>Pruébalo aquí</span></a>
@@ -102,6 +102,11 @@
               <img src="/projects/repuestos-oconitrillo/cover.webp" alt="Inicio del sistema de repuestos nuevos de Repuestos Oconitrillo en computadora" width="1600" height="1000" loading="lazy" decoding="async" />
               <img src="/projects/repuestos-oconitrillo/usados-vender.webp" alt="Venta de una pieza usada en el sistema de Repuestos Oconitrillo" width="1600" height="1000" loading="lazy" decoding="async" />
             </div>
+            <div class="floats" aria-hidden="true">
+              <div class="float float--a"><i class="float__ok"></i><div><b>Aceptado por Hacienda</b><span>Tiquete electrónico · hace un momento</span></div></div>
+              <div class="float float--b"><i class="float__warn"></i><div><b>Stock bajo</b><span>Filtro de aceite · quedan 2</span></div></div>
+              <div class="float float--c"><i class="float__cal"></i><div><b>Nueva cita · 3:00 p. m.</b><span>Corte y barba</span></div></div>
+            </div>
             <div class="billing__phone">
               <img class="is-on" src="/projects/ranger-swat/movil-cobrar.webp" alt="Cobro en el celular con Ranger SWAT" width="780" height="1688" decoding="async" />
               <img src="/projects/repuestos-oconitrillo/movil-caja.webp" alt="Caja abierta en el celular con Repuestos Oconitrillo" width="780" height="1688" loading="lazy" decoding="async" />
@@ -117,10 +122,22 @@
       </div>
     </section>
 
+    <!-- EN NÚMEROS -->
+    <section class="stats" aria-label="Montevo One en números">
+      <div class="wrap">
+        <ul class="stats__grid">
+          <li data-reveal><strong><span data-count="1">1</span></strong><span>sistema para todo tu negocio</span></li>
+          <li data-reveal><strong>∞</strong><span>usuarios, cajas y bodegas</span></li>
+          <li data-reveal><strong>4.4</strong><span>versión de comprobantes de Hacienda</span></li>
+          <li data-reveal><strong>&lt;<span data-count="24">24</span> h</strong><span>para responderte</span></li>
+        </ul>
+      </div>
+    </section>
+
     <!-- MANIFIESTO -->
     <section class="statement" aria-label="La idea de Montevo One">
       <div class="statement__sticky">
-        <p class="statement__text" data-scrub>La mayoría de sistemas te dan lo mismo que a todos y te toca adaptarte. Montevo One es al revés: se hace a tu medida, lleva tu marca y crece contigo. Una sola inversión, todo en un mismo lugar.</p>
+        <p class="statement__text" data-scrub>La mayoría de sistemas te dan lo mismo que a todos y te toca adaptarte. Montevo One es al revés: se hace a tu medida, lleva tu marca y crece contigo. Todo en un mismo lugar, sin límite de usuarios.</p>
       </div>
     </section>
 
@@ -183,7 +200,12 @@
         </header>
         <ul class="mods__grid">
           <li class="mods__item mods__item--hero" data-reveal>
-            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M12 5h24v38l-4-3-4 3-4-3-4 3-4-3-4 3Z"/><path d="M18 15h12M18 21h12M18 27h7"/><path d="M22 34l3 3 6-6"/></svg>
+            <ul class="live" data-live aria-hidden="true">
+              <li><span>Tiquete #1043</span><b>₡31 075</b><em data-st>Aceptado</em></li>
+              <li><span>Factura #212</span><b>₡148 900</b><em data-st>Aceptado</em></li>
+              <li><span>Tiquete #1044</span><b>₡8 475</b><em data-st>Enviado</em></li>
+              <li><span>Nota de crédito #18</span><b>−₡4 500</b><em data-st>Aceptado</em></li>
+            </ul>
             <h3>Facturación electrónica</h3>
             <p>Tiquetes, facturas y notas de crédito en la versión 4.4, con códigos CABYS del catálogo oficial. Se firman, se envían a Hacienda y queda guardada la respuesta. También para régimen simplificado.</p>
           </li>
@@ -194,7 +216,9 @@
           <li class="mods__item" data-reveal><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 12h6l5 20h20l4-14H14"/><circle cx="19" cy="38" r="2.5"/><circle cx="34" cy="38" r="2.5"/></svg><h3>Proveedores y compras</h3><p>Las compras suben existencias, actualizan costos y crean la cuenta por pagar.</p></li>
           <li class="mods__item" data-reveal><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 40V8M8 40h32"/><path d="M15 32v-8M23 32V18M31 32V12"/></svg><h3>Reportes</h3><p>Ventas, IVA por tarifa y lo más vendido, en Excel para tu contador.</p></li>
           <li class="mods__item" data-reveal><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="14" y="6" width="20" height="36" rx="4"/><path d="M21 37h6"/></svg><h3>En el celular</h3><p>Se instala como app en el teléfono y en la computadora, sin pasar por tiendas.</p></li>
-          <li class="mods__item mods__item--you" data-reveal><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 8v32M8 24h32"/></svg><h3>Lo que tu negocio pida</h3><p>¿Trabajas de una forma especial? Lo construyo dentro del mismo sistema.</p></li>
+          <li class="mods__item mods__item--users" data-reveal><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="17" cy="17" r="6"/><circle cx="33" cy="19" r="5"/><path d="M5 38c1.5-7 6-10 12-10s10.5 3 12 10M29 29c5 0 9 2.5 11 8"/></svg><h3>Usuarios ilimitados</h3><p>Todo tu equipo, cada caja y cada bodega, sin pagar por cabeza.</p></li>
+          <li class="mods__item mods__item--wide" data-reveal><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="6" width="32" height="36" rx="4"/><path d="M16 16h16M16 23h16M16 30h9"/><circle cx="34" cy="34" r="7"/><path d="M31 34l2 2 4-4"/></svg><h3>Tu contador, adentro</h3><p>Un acceso propio para tu contador: ve comprobantes, IVA por tarifa y reportes sin pedirte nada por WhatsApp.</p></li>
+          <li class="mods__item mods__item--you mods__item--wide" data-reveal><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 8v32M8 24h32"/></svg><h3>Lo que tu negocio pida</h3><p>¿Trabajas de una forma especial? Lo construyo dentro del mismo sistema.</p></li>
         </ul>
       </div>
     </section>
@@ -215,9 +239,26 @@
           <div class="vs__row" role="row" data-reveal><span role="rowheader">Diseño</span><span role="cell">El mismo para todos</span><span role="cell" class="vs__one">Tu logo, tus colores, tu forma de trabajar</span></div>
           <div class="vs__row" role="row" data-reveal><span role="rowheader">Funciones</span><span role="cell">Las que trae el plan que pagas</span><span role="cell" class="vs__one">Las que tu negocio necesita</span></div>
           <div class="vs__row" role="row" data-reveal><span role="rowheader">Herramientas</span><span role="cell">Facturas en un lado, inventario en otro y citas en otra app</span><span role="cell" class="vs__one">Todo en un solo sistema</span></div>
-          <div class="vs__row" role="row" data-reveal><span role="rowheader">Inversión</span><span role="cell">Planes que suben cuando creces</span><span role="cell" class="vs__one">Una sola inversión</span></div>
+          <div class="vs__row" role="row" data-reveal><span role="rowheader">Cambiarte</span><span role="cell">Normalmente por tu cuenta</span><span role="cell" class="vs__one">Migración incluida</span></div>
+          <div class="vs__row" role="row" data-reveal><span role="rowheader">Usuarios</span><span role="cell">Según el plan que pagues</span><span role="cell" class="vs__one">Ilimitados</span></div>
           <div class="vs__row" role="row" data-reveal><span role="rowheader">Algo nuevo</span><span role="cell">Esperas a que lo agreguen, si es que lo agregan</span><span role="cell" class="vs__one">Me lo pides y lo construyo</span></div>
           <div class="vs__row" role="row" data-reveal><span role="rowheader">Soporte</span><span role="cell">Tickets y centros de llamadas</span><span role="cell" class="vs__one">Directo con quien lo programó</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MIGRACIÓN -->
+    <section class="move">
+      <div class="wrap move__inner">
+        <header class="section-head" data-reveal>
+          <p class="eyebrow">Migración incluida</p>
+          <h2 class="section-title">Cámbiate<br /><span class="muted">sin empezar de cero.</span></h2>
+          <p class="move__lead">¿Ya usas otro sistema? Paso tus clientes, tus productos y tu inventario a Montevo One, para que no tengas que volver a digitar nada.</p>
+        </header>
+        <div class="move__viz" data-reveal aria-hidden="true">
+          <div class="move__box move__box--old"><small>Tu sistema actual</small><span>Clientes</span><span>Productos</span><span>Inventario</span></div>
+          <div class="move__lane"><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="move__box move__box--one"><small>Montevo <b>One</b></small><span>Clientes <em>✓</em></span><span>Productos <em>✓</em></span><span>Inventario <em>✓</em></span></div>
         </div>
       </div>
     </section>
@@ -301,8 +342,20 @@
             <div class="qa__a" id="oq3" role="region" aria-labelledby="oq3-q"><div><p>Sí. Funciona en el celular, la tablet y la computadora, y se instala como app sin pasar por tiendas.</p></div></div>
           </div>
           <div class="qa" data-reveal>
+            <h3><button aria-expanded="false" aria-controls="oq6" id="oq6-q">¿Cuántos usuarios puedo tener?<span class="qa__icon" aria-hidden="true"></span></button></h3>
+            <div class="qa__a" id="oq6" role="region" aria-labelledby="oq6-q"><div><p>Los que necesites. Montevo One no cobra por usuario: todo tu equipo, cada caja y cada bodega entran sin límite.</p></div></div>
+          </div>
+          <div class="qa" data-reveal>
+            <h3><button aria-expanded="false" aria-controls="oq7" id="oq7-q">Ya uso otro sistema. ¿Pierdo mis datos?<span class="qa__icon" aria-hidden="true"></span></button></h3>
+            <div class="qa__a" id="oq7" role="region" aria-labelledby="oq7-q"><div><p>No. La migración está incluida: paso tus clientes, productos e inventario a Montevo One para que sigas como si nada.</p></div></div>
+          </div>
+          <div class="qa" data-reveal>
+            <h3><button aria-expanded="false" aria-controls="oq8" id="oq8-q">¿Mi contador puede entrar?<span class="qa__icon" aria-hidden="true"></span></button></h3>
+            <div class="qa__a" id="oq8" role="region" aria-labelledby="oq8-q"><div><p>Sí. Tiene su propio acceso para ver comprobantes, IVA por tarifa y reportes, y descargarlos en Excel.</p></div></div>
+          </div>
+          <div class="qa" data-reveal>
             <h3><button aria-expanded="false" aria-controls="oq4" id="oq4-q">¿Cuánto cuesta?<span class="qa__icon" aria-hidden="true"></span></button></h3>
-            <div class="qa__a" id="oq4" role="region" aria-labelledby="oq4-q"><div><p>Depende de lo que tu negocio necesite, porque cada Montevo One se hace a la medida. Es una sola inversión. Escríbeme, me cuentas cómo trabajas y te doy un precio concreto.</p></div></div>
+            <div class="qa__a" id="oq4" role="region" aria-labelledby="oq4-q"><div><p>Depende de lo que tu negocio necesite, porque cada Montevo One se hace a la medida. Escríbeme, me cuentas cómo trabajas y te doy un precio claro por todo tu sistema.</p></div></div>
           </div>
           <div class="qa" data-reveal>
             <h3><button aria-expanded="false" aria-controls="oq5" id="oq5-q">¿Quién está detrás de Montevo One?<span class="qa__icon" aria-hidden="true"></span></button></h3>

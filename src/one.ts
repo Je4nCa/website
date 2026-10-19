@@ -14,6 +14,8 @@ import { initGlow } from './modules/glow';
 import { initFaq } from './modules/faq';
 import { initBilling } from './modules/billing';
 import { initPos } from './modules/pos';
+import { initLive } from './modules/live';
+import { initCounters } from './modules/count';
 
 $('#year')!.textContent = String(new Date().getFullYear());
 
@@ -27,3 +29,5 @@ initGlow();
 initFaq();
 initBilling($<HTMLElement>('.ohero'));
 initPos();
+initLive();
+initCounters();
