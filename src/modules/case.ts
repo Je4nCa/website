@@ -10,7 +10,8 @@ const BASE_TITLE = document.title;
  * Project detail overlay with hash routing (#/proyecto/<slug>), so every
  * project has a shareable link and the back button closes it.
  */
-export function initCase(projects: Project[], grid: HTMLElement) {
+export function initCase(projects: Project[], grids: HTMLElement[]) {
+  const cardFor = (slug: string) => grids.map(g => g.querySelector<HTMLElement>(`[data-slug="${CSS.escape(slug)}"]`)).find(Boolean) ?? null;
   const el = $('#case')!;
   const scroller = $('#caseScroller')!;
   const cover = $('#caseCover')!;
@@ -153,17 +154,17 @@ export function initCase(projects: Project[], grid: HTMLElement) {
     if (!slug) return hide();
     if (slug === openSlug) return;
     if (openSlug) swap(slug);
-    else if (!open(slug, grid.querySelector<HTMLElement>(`[data-slug="${CSS.escape(slug)}"]`))) hide();
+    else if (!open(slug, cardFor(slug))) hide();
   }
 
-  grid.addEventListener('click', e => {
+  grids.forEach(grid => grid.addEventListener('click', e => {
     const card = (e.target as Element).closest<HTMLElement>('.card');
     if (!card || e.metaKey || e.ctrlKey || e.shiftKey || e.button) return;
     e.preventDefault();
     const slug = card.dataset.slug!;
     history.pushState({ case: slug }, '', `#/proyecto/${slug}`);
     open(slug, card);
-  });
+  }));
   body.addEventListener('click', e => {
     const link = (e.target as Element).closest<HTMLElement>('[data-next]');
     if (!link) return;

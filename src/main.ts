@@ -10,7 +10,7 @@ import { initReveal } from './modules/reveal';
 import { initNav } from './modules/nav';
 import { initScroll } from './modules/scroll';
 import { initServices } from './modules/services';
-import { initWork } from './modules/work';
+import { initWork, cardHTML } from './modules/work';
 import { initMascot } from './modules/mascot';
 import { initMagnetic } from './modules/magnetic';
 import { initCase } from './modules/case';
@@ -24,6 +24,7 @@ import { initGlow } from './modules/glow';
 import { initTilt } from './modules/tilt';
 import { initCounters } from './modules/count';
 import { initContact } from './modules/contact';
+import { initFab } from './modules/fab';
 
 if (import.meta.env.DEV) {
   const seen = new Set<string>();
@@ -40,7 +41,9 @@ initSplitHeadings();
 $('.hero__title')?.style.setProperty('--d', '80ms');
 const scrubWords = splitScrub($('[data-scrub]'));
 
-// Los sistemas de Montevo One se presentan en /one/; el inicio muestra el resto.
+// Los clientes de Montevo One van en su propia sección; "Trabajo seleccionado" muestra el resto.
+const clientGrid = $('#clientGrid')!;
+clientGrid.innerHTML = projects.filter(p => p.one).map(cardHTML).join('');
 const grid = initWork(projects.filter(p => !p.one), () => scroll.remeasure());
 initStack(stack);
 initReveal();
@@ -55,6 +58,8 @@ initRotator();
 initMarquee();
 initGlow();
 initTilt(grid);
+initTilt(clientGrid);
 initCounters();
 initContact();
-initCase(projects, grid);
+initCase(projects, [clientGrid, grid]);
+initFab();

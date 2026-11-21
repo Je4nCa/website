@@ -16,7 +16,7 @@ export function coverHTML(p: Project, { eager = false } = {}) {
   return `<div class="cover" style="--c1:${esc(c1)};--c2:${esc(c2)}">${inner}</div>`;
 }
 
-const cardHTML = (p: Project) => `
+export const cardHTML = (p: Project) => `
   <a class="card${p.featured ? ' card--featured' : ''}" href="#/proyecto/${esc(p.slug)}" data-slug="${esc(p.slug)}" data-type="${esc(p.type)}" data-reveal>
     <div class="card__media">
       ${coverHTML(p)}
