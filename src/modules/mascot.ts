@@ -110,7 +110,10 @@ export function initMascot() {
     if (!visible || document.hidden) { bubbleTimer = window.setTimeout(next, 1500); return; }
     say(lines[line++ % lines.length]);
   };
-  bubbleTimer = window.setTimeout(next, 1800);
+  // On the live hero the scenes tell the mascot what to say; otherwise it cycles its own lines.
+  if (document.querySelector('[data-live]')) {
+    addEventListener('mascot:say', e => { lines.splice(0, lines.length, (e as CustomEvent<string>).detail); line = 0; say(lines[0], 4200); });
+  } else bubbleTimer = window.setTimeout(next, 1800);
 
   new IntersectionObserver(([e]) => {
     visible = e.isIntersecting;

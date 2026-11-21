@@ -25,6 +25,7 @@ import { initTilt } from './modules/tilt';
 import { initCounters } from './modules/count';
 import { initContact } from './modules/contact';
 import { initFab } from './modules/fab';
+import { initHeroLive } from './modules/hero-live';
 
 if (import.meta.env.DEV) {
   const seen = new Set<string>();
@@ -51,6 +52,7 @@ initNav();
 const scroll = initScroll(scrubWords);
 initServices();
 initMascot();
+initHeroLive();
 initMagnetic();
 initDemos();
 initFaq();

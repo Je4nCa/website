@@ -1,9 +1,11 @@
-import { $, reducedMotion } from '../lib/dom';
+import { $$, reducedMotion } from '../lib/dom';
 
 /** Endless band of services; it speeds up and follows the direction you scroll. */
 export function initMarquee() {
-  const track = $('[data-marquee]');
-  if (!track) return;
+  $$('[data-marquee]').forEach(band);
+}
+
+function band(track: HTMLElement) {
   track.innerHTML += track.innerHTML; // two copies so the loop is seamless
   if (reducedMotion) return;
 
